@@ -714,6 +714,11 @@
     const heroVideo = document.getElementById('heroVideo');
     heroVideo?.play().catch(()=>{});
 
+    // Clean legacy hash-based homepage URLs.
+    if (window.location.hash === '#top') {
+      history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+
     // Support clean section routes without hash fragments.
     const sectionRoutes = {
       '/about': 'about',

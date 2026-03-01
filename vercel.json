@@ -1,6 +1,19 @@
 {
-  "cleanUrls": true,
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/30years", "destination": "/30years.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/books", "destination": "/books.html" },
+    { "source": "/declarations", "destination": "/declarations.html" },
+    { "source": "/events", "destination": "/events.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/gennext", "destination": "/gennext.html" },
+    { "source": "/global", "destination": "/global.html" },
+    { "source": "/location", "destination": "/location.html" },
+    { "source": "/maximised-lifestyle", "destination": "/maximised-lifestyle.html" },
+    { "source": "/salvation", "destination": "/salvation.html" },
+    { "source": "/sermons", "destination": "/sermons.html" },
+    { "source": "/totalmen", "destination": "/totalmen.html" },
     { "source": "/bible-school", "destination": "/bible school.html" },
     { "source": "/get-involved", "destination": "/get involved.html" },
     { "source": "/our-leaders", "destination": "/our leaders.html" },
@@ -8,6 +21,24 @@
     { "source": "/founder", "destination": "/index.html?section=founder" },
     { "source": "/channel", "destination": "/index.html?section=channel" },
     { "source": "/music", "destination": "/index.html?section=music" },
-    { "source": "/giving", "destination": "/index.html?section=giving" }
+    { "source": "/giving", "destination": "/index.html?section=giving" },
+    { "source": "/jesus", "destination": "/salvation.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/books.html", "destination": "/books", "permanent": true },
+    { "source": "/declarations.html", "destination": "/declarations", "permanent": true },
+    { "source": "/events.html", "destination": "/events", "permanent": true },
+    { "source": "/gallery.html", "destination": "/gallery", "permanent": true },
+    { "source": "/gennext.html", "destination": "/gennext", "permanent": true },
+    { "source": "/global.html", "destination": "/global", "permanent": true },
+    { "source": "/location.html", "destination": "/location", "permanent": true },
+    { "source": "/maximised-lifestyle.html", "destination": "/maximised-lifestyle", "permanent": true },
+    { "source": "/our leaders.html", "destination": "/our-leaders", "permanent": true },
+    { "source": "/salvation.html", "destination": "/salvation", "permanent": true },
+    { "source": "/sermons.html", "destination": "/sermons", "permanent": true },
+    { "source": "/totalmen.html", "destination": "/totalmen", "permanent": true },
+    { "source": "/bible school.html", "destination": "/bible-school", "permanent": true },
+    { "source": "/get involved.html", "destination": "/get-involved", "permanent": true }
   ]
 }
