@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved | Harvest House International</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { hhi:{ bg:'#0b0d12', card:'#11131a', brand:'#8b5cf6', brand2:'#22d3ee' } },
+          boxShadow: { card:'0 8px 24px rgba(0,0,0,.30)' },
+          keyframes:{
+            floatUp:{ '0%':{opacity:0,transform:'translateY(14px) scale(.985)'}, '60%':{opacity:1,transform:'translateY(-2px) scale(1.005)'}, '100%':{opacity:1,transform:'translateY(0) scale(1)'} }
+          },
+          animation:{ floatUp:'floatUp .8s cubic-bezier(.2,.65,.2,1) both' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .hero-grad{background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(11,13,18,.95))}
+    .backdrop{background:
+      radial-gradient(900px 450px at 70% 10%, rgba(139,92,246,.16), transparent 60%),
+      radial-gradient(700px 350px at 12% 70%, rgba(34,211,238,.10), transparent 60%);
+    }
+
+    /* Polished card interactions (smooth edges everywhere) */
+    .glow{transition:box-shadow .28s ease, transform .28s ease}
+    .glow:hover{transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,92,246,.35), 0 12px 26px rgba(0,0,0,.5), 0 0 32px rgba(139,92,246,.35)}
+    .thumb{transition:transform .32s ease}
+    .group:hover .thumb{transform:scale(1.02)}
+
+    /* Reveal-once */
+    .reveal{opacity:0; transform:translateY(14px) scale(.985)}
+    .reveal.show{opacity:1; transform:none; animation: floatUp .8s cubic-bezier(.2,.65,.2,1) both}
+
+    /* Glass */
+    .glass{background:linear-gradient(180deg, rgba(17,19,26,.62), rgba(17,19,26,.34)); backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.08)}
+
+    /* Accordion panel */
+    .panel{overflow:hidden; transition:max-height .45s ease, opacity .28s ease}
+  </style>
+</head>
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90 glow">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="pt-24">
+    <section class="relative hero-grad">
+      <img src="get-involved.jpg" alt="Declarations" class="absolute inset-0 -z-10 w-full h-full object-cover opacity-0">
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-24 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] text-hhi-brand uppercase">Harvest House International</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold">Get Involved</h1>
+        <div class="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2"></div>
+        <p class="mt-5 text-white/80">Use your gifts to serve. With many departments across HHI, there’s a place for you.</p>
+      </div>
+    </section>
+
+  <!-- Ministries grid -->
+  <section class="py-8 backdrop">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold">Ministries to Serve In</h2>
+        <p class="text-white/70 text-[15px]">Whatever your gift, there’s a team where you can build God’s house and care for people.</p>
+      </div>
+      <div class="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🎤</div>
+          <h3 class="text-xl font-semibold">HQ Choir</h3>
+          <p class="text-sm text-white/75">Lead the house in passionate worship and weekly rehearsals.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🤝</div>
+          <h3 class="text-xl font-semibold">Greeters</h3>
+          <p class="text-sm text-white/75">Create a warm first impression from the parking lot to the door.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🙌</div>
+          <h3 class="text-xl font-semibold">Ushering</h3>
+          <p class="text-sm text-white/75">Maintain order in the auditorium and assist guests during services.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">❤️</div>
+          <h3 class="text-xl font-semibold">Compassion</h3>
+          <p class="text-sm text-white/75">Visit, pray for and support families going through difficult seasons.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🍽</div>
+          <h3 class="text-xl font-semibold">Hospitality</h3>
+          <p class="text-sm text-white/75">Host guests, prepare green rooms and care for conference teams.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🧒</div>
+          <h3 class="text-xl font-semibold">Children’s Church</h3>
+          <p class="text-sm text-white/75">Teach and disciple children with creative lessons and safety.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">📣</div>
+          <h3 class="text-xl font-semibold">Evangelism</h3>
+          <p class="text-sm text-white/75">Share the Gospel across hubs, campuses and city outreaches.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🕊️</div>
+          <h3 class="text-xl font-semibold">Counselling</h3>
+          <p class="text-sm text-white/75">Walk alongside members needing prayer, wisdom or restoration.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🎛️</div>
+          <h3 class="text-xl font-semibold">Sound & Media</h3>
+          <p class="text-sm text-white/75">Mix audio, operate lights and ensure every broadcast sounds excellent.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">💬</div>
+          <h3 class="text-xl font-semibold">Social Media</h3>
+          <p class="text-sm text-white/75">Capture content, write copy and engage our online family daily.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">📡</div>
+          <h3 class="text-xl font-semibold">Broadcasting</h3>
+          <p class="text-sm text-white/75">Manage cameras, switching and streaming for online services.</p>
+        </article>
+        <article class="rounded-2xl glass glow p-6 flex flex-col gap-3 reveal">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-hhi-brand/25 text-xl">🛡️</div>
+          <h3 class="text-xl font-semibold">Security & Protocol</h3>
+          <p class="text-sm text-white/75">Keep the grounds safe and coordinate protocol for visiting ministers.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interest Form (slimmer) -->
+  <section id="join" class="py-12 backdrop">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl font-extrabold reveal">I’m Interested</h2>
+      <p class="mt-2 text-white/75 reveal text-[15px]">Tell us where you’d like to serve. We’ll follow up with next steps.</p>
+      <div class="mt-6 rounded-2xl bg-white/3 border border-white/10 text-left p-5 sm:p-6 space-y-3 text-[15px] text-white/80 reveal">
+        <h3 class="text-lg font-semibold text-white">Serving Requirements</h3>
+        <ul class="list-disc pl-5 space-y-1.5 text-white/75">
+          <li>Be born again, committed to HHI and living a Christ-like lifestyle.</li>
+          <li>Attend rehearsals or team briefings on time when scheduled.</li>
+          <li>Serve on assigned Sundays or midweek events with a joyful attitude.</li>
+          <li>Stay accountable to your ministry leader and keep learning.</li>
+        </ul>
+      </div>
+      <form id="serveForm" class="mt-7 text-left space-y-3.5 reveal" onsubmit="sendServeWhatsApp(event)">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <label class="text-sm">Full Name *<input required name="fullName" class="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 placeholder-white/40" placeholder="Your name"/></label>
+          <label class="text-sm">Phone Number *<input required name="phoneNumber" class="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 placeholder-white/40" placeholder="+263 …"/></label>
+        </div>
+        <label class="text-sm block">Email<input type="email" name="email" class="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2 placeholder-white/40" placeholder="you@example.com"/></label>
+        <label class="text-sm block">Which team?
+          <select name="team" class="mt-1 w-full rounded-md border border-white/15 bg-white/5 px-3 py-2">
+            <option>HQ Choir</option>
+            <option>Greeters</option>
+            <option>Ushering</option>
+            <option>Compassion</option>
+            <option>Hospitality</option>
+            <option>Childrens Church</option>
+            <option>Evangelism</option>
+            <option>Counselling</option>
+            <option>Sound & Media</option>
+            <option>Social Media</option>
+            <option>Broadcasting</option>
+            <option>Security & Protocol</option>
+          </select>
+        </label>
+        <button class="w-full rounded-full bg-hhi-brand py-2.5 font-semibold shadow-card hover:bg-hhi-brand/90 glow">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#0a0c10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid lg:grid-cols-4 gap-8 text-sm">
+      <div class="space-y-3 reveal">
+        <div class="inline-flex items-center gap-2">
+          <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+          <span class="font-semibold">Harvest House International</span>
+        </div>
+        <p class="text-white/70">
+          Taking the nations for Jesus.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+          </a>
+          <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="jesus.html" class="hover:text-white">Jesus / Salvation</a></li>
+          <li><a href="index.html#channel" class="hover:text-white">Watch</a></li>
+          <li><a href="index.html#music" class="hover:text-white">Harvest Music</a></li>
+          <li><a href="index.html#giving" class="hover:text-white">Give</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Service Times</h4>
+        <ul class="space-y-2 text-white/75">
+          <li>Sunday Services</li>
+          <li>8:30 AM – Morning Service</li>
+          <li>12:00 PM – Second Service</li>
+          <li class="text-xs">(Update to your actual times)</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p class="text-white/75">We’d love to help with your next steps.</p>
+        <a href="mailto:serve@harvesthouseintl.org" class="mt-2 inline-block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5 glow">serve@harvesthouseintl.org</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-xs text-white/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+        <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('backToTop')?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Reveal once
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver((entries, obs)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+      },{threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=> el.classList.add('show'));
+    }
+
+    // Mobile navigation toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+
+      mobileMenuButton.addEventListener('click', ()=>{
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=> setMenuState(false));
+      });
+
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+
+      document.addEventListener('keydown', (event)=>{
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+
+    // Reusable accordion wiring (for ALL departments)
+    function wireAccordions(){
+      const buttons = document.querySelectorAll('[data-toggle]');
+      buttons.forEach(btn=>{
+        const sel = btn.getAttribute('data-toggle');
+        const panel = document.querySelector(sel);
+        const icon  = btn.querySelector('svg');
+        if(!panel) return;
+        let open = false;
+
+        function setOpen(state){
+          open = state;
+          btn.setAttribute('aria-expanded', state ? 'true' : 'false');
+          panel.style.maxHeight = state ? (panel.scrollHeight + 'px') : '0px';
+          panel.style.opacity = state ? '1' : '0';
+          if(icon) icon.style.transform = state ? 'rotate(180deg)' : 'rotate(0deg)';
+          if(state) setTimeout(()=>panel.scrollIntoView({behavior:'smooth', block:'nearest'}), 40);
+        }
+
+        btn.addEventListener('click', ()=> setOpen(!open));
+        new ResizeObserver(()=>{ if(open) panel.style.maxHeight = panel.scrollHeight + 'px'; }).observe(panel);
+      });
+    }
+    wireAccordions();
+
+    // WhatsApp routing for serving interest
+    // TODO: Replace placeholder numbers with the actual WhatsApp contacts for each ministry.
+    const ministryContacts = {
+      'HQ Choir': '+263771000001',
+      'Greeters': '+263771000002',
+      'Ushering': '+263771000003',
+      'Compassion': '+263771000004',
+      'Hospitality': '+263771000005',
+      'Childrens Church': '+263771000006',
+      'Evangelism': '+263771000007',
+      'Counselling': '+263771000008',
+      'Sound & Media': '+263771000009',
+      'Social Media': '+263771000010',
+      'Broadcasting': '+263771000011',
+      'Security & Protocol': '+263771000012'
+    };
+
+    function sendServeWhatsApp(event){
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+      const name = (data.get('fullName') || '').trim();
+      const phone = (data.get('phoneNumber') || '').trim();
+      const email = (data.get('email') || '').trim();
+      const team = data.get('team');
+      const contact = ministryContacts[team] || '+263771000000';
+      const normalized = contact.replace(/[^\d]/g,'');
+
+      const message = [
+        `Hello ${team} Team!`,
+        name ? `My name is ${name}.` : '',
+        `I would love to serve with ${team}.`,
+        phone ? `Phone: ${phone}.` : '',
+        email ? `Email: ${email}.` : '',
+        'Please let me know the next steps. Thank you!'
+      ].filter(Boolean).join(' ');
+
+      const waUrl = `https://wa.me/${normalized}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank', 'noopener');
+      form.reset();
+    }
+    window.sendServeWhatsApp = sendServeWhatsApp;
+  </script>
+</body>
+</html>

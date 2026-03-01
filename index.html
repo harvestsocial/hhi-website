@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/fav.png" />
+  <title>Harvest House International Church | Taking the Nations for Jesus</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            hhi: {
+              bg: '#0b0d12',
+              card: '#11131a',
+              brand: '#22d3ee',
+              brand2: '#8b5cf6'
+            }
+          },
+          boxShadow: {
+            card: '0 10px 30px rgba(0,0,0,.35)'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0', transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+            glowPulse: { '0%,100%': { filter: 'drop-shadow(0 0 10px rgba(139,92,246,.8))' }, '50%': { filter: 'drop-shadow(0 0 20px rgba(34,211,238,1))' } },
+            floatUp: {
+              '0%': { opacity: 0, transform: 'translateY(18px) scale(.98)' },
+              '60%': { opacity: 1, transform: 'translateY(-4px) scale(1.01)' },
+              '100%': { opacity: 1, transform: 'translateY(0) scale(1)' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.2s ease-out forwards',
+            glowPulse: 'glowPulse 3s ease-in-out infinite',
+            floatUp: 'floatUp .9s cubic-bezier(.2,.65,.2,1) both'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; } /* smooth scroll for #anchor links */
+
+    .backdrop-gradient{
+      background:
+        radial-gradient(1200px 600px at 70% 10%, rgba(139,92,246,.25), transparent 60%),
+        radial-gradient(800px 400px at 20% 60%, rgba(34,211,238,.18), transparent 60%);
+    }
+    #founder{
+      background-image:
+        linear-gradient(120deg, rgba(11,13,18,.95), rgba(11,13,18,.8)),
+        url('assets/back.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    #channel{
+      background-image:
+        linear-gradient(180deg, rgba(11,13,18,.9), rgba(11,13,18,.9)),
+        url('assets/live.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    #music{
+      background-image:
+        linear-gradient(120deg, rgba(11,13,18,.94), rgba(11,13,18,.7)),
+        url('assets/harvestmusic.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(11,13,18,.85));
+      pointer-events:none;
+      z-index:1;
+      overflow:hidden;
+    }
+    .hero-overlay::before,
+    .hero-overlay::after{
+      content:'';
+      position:absolute;
+      width:45%;
+      height:45%;
+      border-radius:50%;
+      filter:blur(80px);
+      opacity:.4;
+      mix-blend-mode:screen;
+    }
+    .hero-overlay::before{
+      background:radial-gradient(circle, rgba(34,211,238,.45), transparent 65%);
+      top:10%;
+      left:15%;
+    }
+    .hero-overlay::after{
+      background:radial-gradient(circle, rgba(139,92,246,.45), transparent 65%);
+      bottom:5%;
+      right:10%;
+    }
+    .hero-video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:grayscale(100%) brightness(1.15) contrast(1.08);
+      opacity:.85;
+    }
+    .fade-edge{mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.8) 70%, rgba(0,0,0,0));}
+    .founder-portrait{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:1.5rem;
+      transition:transform .75s cubic-bezier(.22,.61,.36,1), filter .6s ease;
+      transform-origin:bottom center;
+      will-change:transform;
+    }
+    .reveal.revealed .founder-portrait{
+      animation:portraitBounce 1.6s cubic-bezier(.22,.61,.36,1) both;
+    }
+    @keyframes portraitBounce{
+      0%{transform:scale(.96) translateY(16px);}
+      45%{transform:scale(1.04) translateY(-6px);}
+      70%{transform:scale(.99) translateY(2px);}
+      100%{transform:scale(1) translateY(0);}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .founder-portrait{
+        animation:none !important;
+        transition:none;
+      }
+      #founder .relative:hover .founder-portrait{ transform:none; }
+    }
+
+    /* === Glow & Zoom effects === */
+    header a[href="#giving"],
+    #top a[href="#events"],
+    #top a[href="#channel"],
+    #giving button {
+      transition: box-shadow .25s ease, transform .2s ease;
+    }
+    header a[href="#giving"]:hover,
+    #top a[href="#events"]:hover,
+    #top a[href="#channel"]:hover,
+    #giving button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 0 1px rgba(139,92,246,.45),
+                  0 8px 24px rgba(0,0,0,.45),
+                  0 0 28px rgba(139,92,246,.45);
+    }
+
+    #about aside .bg-hhi-card,
+    #founder .rounded-3xl,
+    #channel .rounded-3xl,
+    #music .rounded-3xl,
+    #missions .rounded-3xl,
+    #missions .aspect-video {
+      transition: box-shadow .3s ease, transform .3s ease, filter .3s ease;
+    }
+    #about aside .bg-hhi-card:hover,
+    #founder .rounded-3xl:hover,
+    #channel .rounded-3xl:hover,
+    #music .rounded-3xl:hover,
+    #missions .rounded-3xl:hover,
+    #missions .aspect-video:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 1px rgba(139,92,246,.45),
+                  0 12px 32px rgba(0,0,0,.55),
+                  0 0 42px rgba(139,92,246,.45);
+    }
+    #founder .relative:hover img.rounded-3xl,
+    #music .relative:hover img.rounded-3xl,
+    #channel .relative:hover iframe,
+    #missions .relative:hover img {
+      transform: scale(1.03);
+    }
+    #founder .relative:hover .founder-portrait,
+    #founder .founder-portrait:hover {
+      transform: scale(1.08);
+      filter: drop-shadow(0 20px 35px rgba(0,0,0,.45));
+    }
+    #about aside .bg-hhi-card:hover img.rounded-xl { transform: scale(1.03); }
+    #about aside img.rounded-xl { transition: transform .35s ease; }
+
+    .frosted-card{
+      background-color: rgba(17,19,26,.65) !important;
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.45);
+    }
+    .frosted-cta{
+      background-color: rgba(255,255,255,.12);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.3);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: background .3s ease, color .3s ease, box-shadow .3s ease, transform .3s ease;
+    }
+    .frosted-cta:hover{
+      background:linear-gradient(120deg, rgba(34,211,238,.85), rgba(139,92,246,.85));
+      color:#0b0d12;
+      box-shadow:0 0 0 1px rgba(255,255,255,.4), 0 16px 36px rgba(0,0,0,.5);
+      transform:translateY(-2px);
+    }
+    @keyframes bounceDown{
+      0%,100%{ transform: translateY(0); }
+      50%{ transform: translateY(8px); }
+    }
+    #scrollDownBtn .bounce-icon{
+      width:38px;
+      height:38px;
+      border:1px solid rgba(255,255,255,.4);
+      border-radius:9999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.1rem;
+      animation: bounceDown 1.6s ease-in-out infinite;
+      margin-left:0.5rem;
+    }
+
+    /* === Reveal-once (first page load) === */
+    .reveal { opacity: 0; transform: translateY(18px) scale(.98); }
+    .reveal.revealed { opacity: 1; transform: none; animation: floatUp .9s cubic-bezier(.2,.65,.2,1) both; }
+
+    /* Scroll Down button look */
+    #scrollDownBtn { cursor: pointer; }
+    .tilt-react{transition:transform .35s ease, box-shadow .35s ease;}
+    .tilt-react:hover{box-shadow:0 24px 50px rgba(0,0,0,.45);}
+  </style>
+</head>
+<body class="bg-hhi-bg text-white antialiased selection:bg-hhi-brand/30">
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold tracking-tight">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative pt-24 lg:pt-28 min-h-[420px] lg:min-h-[520px]">
+    <div class="absolute inset-0 -z-10">
+      <video id="heroVideo" class="hero-video fade-edge" autoplay muted loop playsinline preload="metadata" poster="assets/auditorium.jpeg" aria-hidden="true">
+        <source src="assets/video.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-28 lg:py-40">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight reveal">Harvest House Int.</h1>
+      <div class="mx-auto mt-4 h-1.5 w-40 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2 reveal"></div>
+      <p class="mt-6 text-xl text-white/80 reveal">Welcome, we're glad you're here.</p>
+      <div class="mt-8 flex items-center justify-center gap-4 reveal">
+        <button type="button" onclick="openWeekend()" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold frosted-cta">Join Us This Weekend</button>
+        <a href="#channel" class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Online</a>
+      </div>
+      <img src="assets/HHI 30.png" alt="HHI 30 Years Logo" id="anniversaryLogo" class="mx-auto w-44 mt-8 animate-fadeIn animate-glowPulse reveal"/>
+      <div id="scrollDownBtn" class="mt-16 text-white/60 text-sm hover:text-white/80 inline-flex flex-col items-center gap-3 reveal">
+        <span>Scroll Down</span>
+        <span class="bounce-icon">↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Who we are -->
+  <section id="about" class="relative py-24 backdrop-gradient text-white reveal">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-12">
+      <div class="md:col-span-2">
+        <h2 class="text-4xl font-bold text-white reveal">Harvest House International Church</h2>
+        <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
+        <p class="mt-4 leading-relaxed text-white/80 reveal">Harvest House International Church began in 1995 in the home of its founders and Senior Pastors, Bishops Dr. Colin and Sarah Nyathi. What started with just eight people gathered in their lounge has grown into a global movement. Today, HHI has more than 300 churches across the world. </p>
+
+        <p class="mt-4 leading-relaxed text-white/80 reveal">In Bulawayo, Zimbabwe, this vision has taken deep root. Week after week, thousands come together to worship, serve, and grow. We are committed to building leaders, strengthening families, and raising a generation that is passionate about the Gospel. </p>
+
+        <p class="mt-4 leading-relaxed text-white/80 reveal">Our mission is clear: to take the nations for Christ Jesus. We preach the Gospel with signs and wonders following, bringing life and healing to the lost, the wounded, the lonely, the rejected, and the downtrodden.</p>
+      </div>
+      <aside class="md:pl-8 reveal">
+        <div class="rounded-2xl bg-hhi-card p-6 shadow-card frosted-card">
+          <img src="assets/Bihops C & S.jpg" class="w-full h-44 object-cover rounded-xl" alt="Pastor portrait"/>
+          <h3 class="mt-4 text-lg font-semibold">Bishops Dr. Colin & Sarah Nyathi</h3>
+          <p class="text-sm text-white/70">Founders & Senior Pastors of Harvest House International</p>
+          <a href="our leaders.html" class="mt-4 inline-flex text-hhi-brand underline underline-offset-4">Get to know them →</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Founder highlight -->
+  <section id="founder" class="relative pt-16 pb-0 lg:pt-24 lg:pb-0 reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Bishop Dr. Colin Nyathi</h2>
+        <p class="text-sm text-white/70">Apostolic leader & visionary of Harvest House International</p>
+        <p class="mt-6 text-white/80 leading-relaxed">Bishop Nyathi is a pastor, church planter and author whose ministry has impacted nations. With a passion for revival, leadership development and evangelism, HHI has grown from humble beginnings to a global church family. HHICC—our 10,500-seater auditorium—stands as a testimony to God’s faithfulness and the diligence of the Harvest Family.</p>
+        <p class="mt-4 text-white/80 leading-relaxed">Discover the vision, stories and resources that continue to shape our movement.</p>
+        <img src="assets/signature.png" alt="Signature of Bishop Dr. Colin Nyathi" class="mt-6 h-14 w-auto opacity-80">
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="books.html" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/10">Books</a>
+          <a href="sermons.html" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-5 py-2.5 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Sermons</a>
+        </div>
+      </div>
+      <div class="relative reveal flex items-end justify-center h-full lg:self-end">
+        <img src="assets/Bishop.png" alt="Preaching" class="founder-portrait"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- HHI Channel / Watch online -->
+  <section id="channel" class="relative py-24 backdrop-gradient reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Stay Connected</h2>
+        <div class="mt-2 h-1 w-24 bg-orange-400"></div>
+        <p class="mt-6 text-white/80">Your all-access pass to what’s happening across Harvest House International.
+          Catch services, testimonies and specials from around the world.</p>
+        <a href="sermons.html" class="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Live Streams →</a>
+      </div>
+      <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card reveal group">
+        <img src="assets/hhi-thumb.jpg" alt="HHI Channel"
+             class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-50">
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30"></div>
+        <a href="sermons.html"
+           class="absolute inset-0 flex items-center justify-center"
+           aria-label="Play sermons">
+          <div class="w-20 h-20 rounded-full bg-white/90 text-black text-4xl flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            ▶
+          </div>
+        </a>
+      </div>
+</section>
+
+  <!-- Harvest Music -->
+  <section id="music" class="relative py-24 backdrop-gradient reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="flex items-center gap-3">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="sr-only">Harvest Music</span>
+            <img src="assets/harvestmusic-logo.png" alt="" aria-hidden="true" class="h-24 w-auto">
+          </h2>
+        </div>
+        <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
+        <div class="mt-6 space-y-3 text-white/80">
+          <p class="text-sm uppercase tracking-[0.3em] text-hhi-brand">Newest Album</p>
+          <h3 class="text-4xl font-bold">Hlala nami</h3>
+        <p class="mt-6 text-white/80">Abide in me Lord</p>
+          <a href="https://solo.to/harvestmusiczw" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10 transition">Pre-Order Dec 07</a>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="https://music.apple.com/us/artist/harvest-music-zw/1714772453" target="_blank" class="rounded-2xl bg-hhi-card px-6 py-4 text-base font-semibold shadow-card hover:bg-white/5 inline-flex items-center gap-3">
+            <img src="assets/apple-music-logo.png" alt="" class="h-5 w-5" aria-hidden="true">
+            Apple Music
+          </a>
+          <a href="https://open.spotify.com/artist/1PprALM81MIzSqAMHR4QoD" target="_blank" class="rounded-2xl bg-hhi-card px-6 py-4 text-base font-semibold shadow-card hover:bg-white/5 inline-flex items-center gap-3">
+            <img src="assets/spotify-logo.png" alt="" class="h-5 w-5" aria-hidden="true">
+            Spotify
+          </a>
+          <a href="https://www.youtube.com/@HarvestMusicZW/videos" class="rounded-2xl bg-hhi-card px-6 py-4 text-base font-semibold shadow-card hover:bg-white/5 inline-flex items-center gap-3">
+            <img src="assets/youtubeicon.png" alt="" class="h-5 w-5" aria-hidden="true">
+            Youtube
+          </a>
+        </div>
+      </div>
+      <div class="reveal flex justify-center">
+        <img src="assets/Hlala Nami.jpg" alt="Hlala Nami album cover" class="rounded-3xl shadow-card object-cover w-full max-w-sm tilt-react" data-tilt>
+      </div>
+    </div>
+  </section>
+
+  <!-- Harvest on Campus -->
+  <section id="missions" class="relative py-24 reveal" style="background-image: linear-gradient(120deg, rgba(11,13,18,.9), rgba(11,13,18,.6)), url('assets/hoc.png'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Harvest on Campus</h2>
+        <div class="mt-2 h-1 w-24 bg-orange-400"></div>
+        <p class="mt-6 text-white/80">We are committed to bringing the Gospel to every city and Campus and winning young souls to Christ.</p>
+        <a href="totalmen.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+      </div>
+      <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
+        <img src="assets/HoC.jpg" class="w-full h-full object-cover" alt="Crusade"/>
+      </div>
+    </div>
+  </section>
+
+    <!-- Generation Next -->
+  <section id="missions" class="relative py-24 reveal" style="background-image: linear-gradient(120deg, rgba(11,13,18,.9), rgba(11,13,18,.6)), url('assets/genxt.png'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Generation Next</h2>
+        <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
+        <p class="mt-6 text-white/80">Empowering &amp; equipping the next generation of leaders. Join us for impactful gatherings, powerful teachings, and divine connections.</p>
+        <a href="gennext.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+      </div>
+      <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
+        <img src="assets/gen-next.jpg" class="w-full h-full object-cover" alt="Crusade"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Total Men -->
+  <section id="missions" class="relative py-24 reveal" style="background-image: linear-gradient(120deg, rgba(11,13,18,.9), rgba(11,13,18,.6)), url('assets/tm.png'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Total Men</h2>
+        <div class="mt-2 h-1 w-24 bg-orange-400"></div>
+        <p class="mt-6 text-white/80">We are committed to bringing the Gospel to every city and Campus and winning young souls to Christ.</p>
+        <a href="totalmen.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+      </div>
+      <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
+        <img src="assets/totalmen.jpg" class="w-full h-full object-cover" alt="Crusade"/>
+      </div>
+    </div>
+  </section>
+
+    <!-- Maximised Lifestyle -->
+  <section id="missions" class="relative py-24 reveal" style="background-image: linear-gradient(120deg, rgba(11,13,18,.9), rgba(11,13,18,.7)), url('assets/mli.png'); background-size: cover; background-position: center;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-4xl font-bold">Maximised Lifestyle</h2>
+        <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
+        <p class="mt-6 text-white/80">Empowering &amp; equipping the next generation of leaders. Join us for impactful gatherings, powerful teachings, and divine connections.</p>
+        <a href="maximised-lifestyle.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+      </div>
+      <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
+        <img src="assets/mli.jpg" class="w-full h-full object-cover" alt="Crusade"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Giving CTA -->
+  <section id="giving" class="relative py-28 backdrop-gradient reveal">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-5xl font-extrabold reveal">Giving</h2>
+      <div class="mx-auto mt-4 h-1.5 w-28 rounded-full bg-hhi-brand reveal"></div>
+      <p class="mt-6 text-lg text-white/80 reveal">You can give to Harvest House International if you’ve been blessed by any of our services in person or online. God bless you!</p>
+      <button onclick="openGiving()" class="mt-8 inline-flex items-center gap-2 rounded-full bg-hhi-brand px-8 py-3 text-lg font-semibold shadow-card hover:bg-hhi-brand/90 reveal">Click here to give →</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#0a0c10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-8 text-sm">
+      <div class="space-y-3 reveal">
+        <div class="inline-flex items-center gap-2">
+          <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+          <span class="font-semibold">Harvest House International</span>
+        </div>
+        <p class="text-white/70">Taking the nations for Jesus.</p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+          </a>
+          <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="#about" class="hover:text-white">About Us</a></li>
+          <li><a href="#founder" class="hover:text-white">Our Founder</a></li>
+          <li><a href="#channel" class="hover:text-white">HHI Channel</a></li>
+          <li><a href="#music" class="hover:text-white">Harvest Music</a></li>
+          <li><a href="#giving" class="hover:text-white">Give</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Service Times</h4>
+        <ul class="space-y-2 text-white/75">
+          <li>Every Sunday</li>
+          <li>8:30 AM – Main Service</li>
+          <li>Every Tuesday</li>
+          <li>5:30 PM – Prayer Service</li>
+          <li>Every Friday</li>
+          <li>5:30 PM – Revival Nights</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Connect With Us</h4>
+        <p class="text-white/75">Catch the latest sermon from the Harvest House International.</p>
+        <div class="mt-3 space-y-2">
+          <a href="sermons.html" class="block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">Sermons →</a>
+          <a href="#" class="block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">Android App →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom: left-aligned © + right-aligned Back to top -->
+    <div class="border-t border-white/10 text-xs text-white/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div id="copyrightLine">© <span id="year"></span> Harvest House International. All rights reserved.</div>
+        <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Us This Weekend modal -->
+  <div id="weekendModal" class="fixed inset-0 z-[60] hidden grid place-items-center bg-black/70 p-4 sm:p-6">
+    <div class="w-full max-w-4xl rounded-[32px] overflow-hidden text-white shadow-[0_30px_80px_rgba(0,0,0,0.65)] relative">
+      <button type="button" onclick="closeWeekend()" class="absolute top-4 right-4 bg-white text-black hover:text-hhi-brand rounded-full shadow-lg flex items-center gap-2 px-4 py-1.5 font-semibold z-10" aria-label="Close">
+        <span class="text-xl">×</span>
+        <span class="text-sm uppercase tracking-wide">Close</span>
+      </button>
+      <div class="grid md:grid-cols-[1.2fr_0.8fr]">
+        <div class="bg-gradient-to-b from-[#0d121f] via-[#111831] to-[#0b0f1c] p-8 sm:p-10 space-y-8">
+          <div>
+            <p class="text-sm tracking-[0.4em] uppercase text-white/50">Plan a visit</p>
+            <h3 class="text-3xl sm:text-4xl font-extrabold mt-2">Join Us This Weekend</h3>
+          </div>
+          <div class="space-y-6">
+            <div>
+              <div class="flex items-center gap-2 text-white/70 text-sm uppercase tracking-widest">
+                <span>Sunday Service</span>
+              </div>
+              <p class="text-xl font-semibold mt-2">8:30 AM – Main Service</p>
+              <p class="text-white/70 text-sm">Harvest House International Conference Centre</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 text-white/70 text-sm uppercase tracking-widest">
+                <span>Tuesday Prayer</span>
+              </div>
+              <p class="text-xl font-semibold mt-2">5:30 PM – Prayer Service</p>
+              <p class="text-white/70 text-sm">Harvest House International Conference Centre</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 text-white/70 text-sm uppercase tracking-widest">
+                <span>Friday Revival</span>
+              </div>
+              <p class="text-xl font-semibold mt-2">5:30 PM – Revival Nights</p>
+              <p class="text-white/70 text-sm">Harvest House International Conference Centre</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative bg-gradient-to-b from-[#1b1335] via-[#120c29] to-[#05070f] p-8 sm:p-10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <p class="text-sm uppercase tracking-[0.4em] text-white/50">Our Location</p>
+            <h4 class="text-2xl font-semibold">Harvest House International Conference Centre</h4>
+            <p class="text-white/70 text-sm">Selbourne Park, Bulawayo</p>
+            <p class="text-white/60 text-sm">Behind Fazak Home &amp; Hyper</p>
+          </div>
+          <a href="location.html" class="mt-10 inline-flex items-center justify-center rounded-full bg-white/10 px-4 py-3 font-semibold border border-white/20 hover:bg-white/20 transition">
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Giving modal (simple placeholder form) -->
+  <div id="givingModal" class="fixed inset-0 z-[60] hidden place-items-center bg-black/70 p-6">
+    <div class="w-full max-w-3xl rounded-2xl bg-white text-gray-900 grid md:grid-cols-2 overflow-hidden">
+      <div class="p-8 bg-gray-50">
+        <div class="text-2xl font-bold">Harvest House International</div>
+        <div class="mt-2 text-sm text-gray-600">Be blessed as you give! For anonymous giving, please use the email finance@harvesthouseintl.org.</div>
+        <div class="mt-8 flex flex-wrap items-center gap-2 text-gray-600 text-sm">
+          <span class="inline-flex items-center gap-2 rounded-md border px-2.5 py-1">💳 Visa</span>
+          <span class="inline-flex items-center gap-2 rounded-md border px-2.5 py-1">💳 Mastercard</span>
+          <span class="inline-flex items-center gap-2 rounded-md border px-2.5 py-1">📱 Mobile Money</span>
+          <span class="inline-flex items-center gap-2 rounded-md border px-2.5 py-1"> Pay</span>
+        </div>
+      </div>
+      <form class="p-8 space-y-4" onsubmit="event.preventDefault(); window.open('https://www.paynow.co.zw/Payment/Link/?q=c2VhcmNoPWFkbWluJTQwaGhpY2Mub3JnLnp3JmFtb3VudD01LjAwJnJlZmVyZW5jZT1TdGFuZGFyZCtSZWdpc3RyYXRpb24mbD0x','_blank'); closeGiving();">
+        <div class="grid grid-cols-2 gap-3">
+          <label class="text-sm">First name<input required class="mt-1 w-full rounded-md border px-3 py-2" placeholder="First name"/></label>
+          <label class="text-sm">Last name<input required class="mt-1 w-full rounded-md border px-3 py-2" placeholder="Last name"/></label>
+        </div>
+        <label class="text-sm block">Email address<input type="email" required class="mt-1 w-full rounded-md border px-3 py-2" placeholder="Email address"/></label>
+        <label class="text-sm block">Amount<select class="mt-1 w-full rounded-md border px-3 py-2"><option>USD</option><option>ZAR</option><option>ZWL</option></select></label>
+        <input required class="w-full rounded-md border px-3 py-2" placeholder="Amount" />
+        <button class="w-full rounded-md bg-emerald-600 py-2.5 font-semibold text-white hover:bg-emerald-700">Pay now</button>
+        <button type="button" onclick="closeGiving()" class="w-full rounded-md bg-gray-100 py-2.5 font-semibold hover:bg-gray-200">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Open/close giving modal
+    const openGiving = ()=> document.getElementById('givingModal').classList.remove('hidden');
+    const closeGiving = ()=> document.getElementById('givingModal').classList.add('hidden');
+    const openWeekend = ()=> document.getElementById('weekendModal').classList.remove('hidden');
+    const closeWeekend = ()=> document.getElementById('weekendModal').classList.add('hidden');
+
+    // Year + footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Down button → next section after #top
+    document.getElementById('scrollDownBtn')?.addEventListener('click', () => {
+      const sections = Array.from(document.querySelectorAll('section'));
+      const idx = sections.findIndex(s => s.id === 'top');
+      const next = sections[idx + 1];
+      if (next) next.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Back to top ↗
+    document.getElementById('backToTop')?.addEventListener('click', () => {
+      document.getElementById('top').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Magnetic anniversary logo effect
+    const heroSection = document.getElementById('top');
+    const anniversaryLogo = document.getElementById('anniversaryLogo');
+    if (heroSection && anniversaryLogo) {
+      let raf;
+      const strength = 18;
+      const onMove = (event) => {
+        if (!heroSection) return;
+        const rect = heroSection.getBoundingClientRect();
+        const offsetX = ((event.clientX - rect.left) / rect.width - 0.5) * strength;
+        const offsetY = ((event.clientY - rect.top) / rect.height - 0.5) * strength;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          anniversaryLogo.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
+        });
+      };
+      const reset = () => {
+        cancelAnimationFrame(raf);
+        anniversaryLogo.style.transform = '';
+      };
+      heroSection.addEventListener('pointermove', onMove);
+      heroSection.addEventListener('pointerleave', reset);
+    }
+
+    // Hero video plays continuously
+    const heroVideo = document.getElementById('heroVideo');
+    heroVideo?.play().catch(()=>{});
+
+    // Subtle tilt on Hlala Nami artwork (reacts to movement across the whole section)
+    const tiltTargets = Array.from(document.querySelectorAll('[data-tilt]'));
+    const tiltArea = document.getElementById('music');
+    if (tiltTargets.length && tiltArea) {
+      let raf;
+      const strength = 10;
+      const onMove = (event) => {
+        const areaRect = tiltArea.getBoundingClientRect();
+        const offsetX = ((event.clientX - areaRect.left) / areaRect.width - 0.5) * strength;
+        const offsetY = ((event.clientY - areaRect.top) / areaRect.height - 0.5) * strength;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          tiltTargets.forEach(target => {
+            target.style.transform = `perspective(1000px) rotateX(${ -offsetY }deg) rotateY(${ offsetX }deg) translateZ(4px)`;
+          });
+        });
+      };
+      const reset = () => {
+        cancelAnimationFrame(raf);
+        tiltTargets.forEach(target => { target.style.transform = ''; });
+      };
+      tiltArea.addEventListener('pointermove', onMove);
+      tiltArea.addEventListener('pointerleave', reset);
+    }
+
+    // Reveal-once logic (runs once per element on each page load)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+            obs.unobserve(e.target); // animate once
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      // If user prefers reduced motion, just show content without animation
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+    }
+
+    // Mobile navigation toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+
+      mobileMenuButton.addEventListener('click', () => {
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenuState(false));
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HHI Admin</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode:'class', theme:{ extend:{ colors:{ hhi:{ bg:'#0b0d12', card:'#11131a', brand:'#8b5cf6', brand2:'#22d3ee' }}, boxShadow:{ card:'0 10px 30px rgba(0,0,0,.35)'}}}};
+  </script>
+  <style>
+    body{background:#0b0d12;color:#fff}
+    .card{background:#11131a;border:1px solid rgba(255,255,255,.08)}
+    input,select,textarea{color:#111}
+    .tab{cursor:pointer}
+    .tab.active{background:#8b5cf6;color:#fff}
+    .btn{border:1px solid rgba(255,255,255,.12);padding:.5rem .75rem;border-radius:.5rem}
+    .btn-primary{background:#8b5cf6;border-color:#8b5cf6;color:#fff}
+    .btn-danger{background:#ef4444;border-color:#ef4444;color:#fff}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+    .pill{border:1px solid rgba(255,255,255,.12);border-radius:9999px;padding:.25rem .6rem;font-size:12px}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 py-6">
+    <header class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold">HHI Admin</h1>
+      <div id="authArea" class="flex items-center gap-3">
+        <form id="loginForm" class="flex gap-2">
+          <input name="user" placeholder="Admin user" class="rounded-md px-3 py-2" required/>
+          <input type="password" name="pass" placeholder="Password" class="rounded-md px-3 py-2" required/>
+          <button class="btn btn-primary">Login</button>
+        </form>
+        <div id="whoami" class="hidden items-center gap-2">
+          <span class="pill">Signed in</span>
+          <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mt-6 flex gap-2">
+      <button class="tab pill active" data-tab="events">Events</button>
+      <button class="tab pill" data-tab="attendees">Attendees</button>
+      <button class="tab pill" data-tab="settings">Settings</button>
+    </nav>
+
+    <!-- EVENTS TAB -->
+    <section id="tab-events" class="mt-6">
+      <div class="card rounded-xl p-4">
+        <h2 class="font-semibold mb-3">Create / Edit Event</h2>
+        <form id="eventForm" class="grid-3">
+          <input name="id" type="hidden"/>
+          <label class="text-sm">Title<input name="title" required class="mt-1 w-full rounded-md border px-3 py-2"/></label>
+          <label class="text-sm">Starts At (ISO)<input name="startsAt" required placeholder="2025-11-01T18:00:00Z" class="mt-1 w-full rounded-md border px-3 py-2"/></label>
+          <label class="text-sm">Venue<input name="venue" required class="mt-1 w-full rounded-md border px-3 py-2"/></label>
+          <label class="text-sm">Banner URL<input name="bannerUrl" required class="mt-1 w-full rounded-md border px-3 py-2 col-span-2"/></label>
+          <label class="text-sm">Type
+            <select name="type" class="mt-1 w-full rounded-md border px-3 py-2">
+              <option value="FREE">FREE (RSVP)</option>
+              <option value="PAID">PAID (Tickets)</option>
+            </select>
+          </label>
+          <div class="col-span-3 flex gap-2">
+            <button class="btn btn-primary">Save</button>
+            <button type="button" id="resetEvent" class="btn">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-4 card rounded-xl p-4">
+        <div class="flex items-center justify-between">
+          <h2 class="font-semibold">Events</h2>
+          <button id="refreshEvents" class="btn">Refresh</button>
+        </div>
+        <div id="eventsTable" class="mt-3 overflow-x-auto text-sm"></div>
+      </div>
+
+      <div class="mt-4 card rounded-xl p-4">
+        <h2 class="font-semibold">Ticket Types (select event)</h2>
+        <div class="grid-3 mt-2">
+          <label class="text-sm">Event<select id="ttEvent" class="mt-1 w-full rounded-md border px-3 py-2"></select></label>
+          <label class="text-sm">Name<input id="ttName" class="mt-1 w-full rounded-md border px-3 py-2" placeholder="General Admission"/></label>
+          <label class="text-sm">Price (USD)<input id="ttPrice" type="number" step="0.01" min="0" class="mt-1 w-full rounded-md border px-3 py-2" value="0"/></label>
+        </div>
+        <div class="mt-2 flex gap-2">
+          <button id="addTT" class="btn btn-primary">Add Ticket Type</button>
+          <button id="refreshTT" class="btn">Refresh</button>
+        </div>
+        <div id="ttTable" class="mt-3 overflow-x-auto text-sm"></div>
+      </div>
+    </section>
+
+    <!-- ATTENDEES TAB -->
+    <section id="tab-attendees" class="mt-6 hidden">
+      <div class="card rounded-xl p-4">
+        <div class="grid-3">
+          <label class="text-sm">Event<select id="aEvent" class="mt-1 w-full rounded-md border px-3 py-2"></select></label>
+          <label class="text-sm col-span-2">Search<input id="aQuery" class="mt-1 w-full rounded-md border px-3 py-2" placeholder="name, email or phone"/></label>
+        </div>
+        <div class="mt-2 flex gap-2">
+          <a id="exportCsv" class="btn" href="#">Export CSV</a>
+          <button id="refreshAtt" class="btn">Refresh</button>
+        </div>
+        <div id="attTable" class="mt-3 overflow-x-auto text-sm"></div>
+      </div>
+    </section>
+
+    <!-- SETTINGS TAB -->
+    <section id="tab-settings" class="mt-6 hidden">
+      <div class="card rounded-xl p-4">
+        <h2 class="font-semibold mb-2">Security/Info</h2>
+        <ul class="list-disc ml-5 text-white/80 text-sm space-y-1">
+          <li>All admin routes require session + CSRF.</li>
+          <li>QR tokens are signed (HS256) and double-checked against DB on scan.</li>
+          <li>Webhooks must be verified and idempotent.</li>
+          <li>Exported CSV includes only necessary fields.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+<script>
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+const csrf = () => (document.cookie.match(/csrfToken=([^;]+)/)||[])[1]||'';
+
+async function getJSON(url){ const r = await fetch(url,{credentials:'include'}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+async function postJSON(url, body){ const r = await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','CSRF-Token':csrf()},body:JSON.stringify(body),credentials:'include'}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+async function patchJSON(url, body){ const r = await fetch(url,{method:'PATCH',headers:{'Content-Type':'application/json','CSRF-Token':csrf()},body:JSON.stringify(body),credentials:'include'}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+async function del(url){ const r = await fetch(url,{method:'DELETE',headers:{'CSRF-Token':csrf()},credentials:'include'}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+
+// auth
+async function refreshAuth(){
+  const r = await fetch('/api/admin/me',{credentials:'include'});
+  if(r.ok){ $('#loginForm').classList.add('hidden'); $('#whoami').classList.remove('hidden'); }
+  else { $('#loginForm').classList.remove('hidden'); $('#whoami').classList.add('hidden'); }
+}
+$('#loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  await postJSON('/api/admin/login', Object.fromEntries(fd));
+  await refreshAuth(); await loadEvents(); await loadTT(); await loadAttendees();
+});
+$('#logoutBtn').addEventListener('click', async ()=>{
+  await postJSON('/api/admin/logout', {}); await refreshAuth();
+});
+refreshAuth();
+
+// tabs
+$$('.tab').forEach(t=> t.addEventListener('click', ()=>{
+  $$('.tab').forEach(tt=>tt.classList.remove('active'));
+  t.classList.add('active');
+  const key = t.dataset.tab;
+  ['events','attendees','settings'].forEach(k=> $('#tab-'+k).classList.toggle('hidden', k!==key));
+}));
+
+// EVENTS
+async function loadEvents(){
+  const evs = await getJSON('/api/admin/events');
+  // fill select controls
+  const opts = evs.map(e=>`<option value="${e.id}">${e.title}</option>`).join('');
+  $('#ttEvent').innerHTML = opts;
+  $('#aEvent').innerHTML = `<option value="">— choose event —</option>` + opts;
+  // table
+  $('#eventsTable').innerHTML = `
+    <table class="min-w-full">
+      <thead><tr class="text-left">
+        <th class="p-2">Title</th><th class="p-2">Starts</th><th class="p-2">Venue</th><th class="p-2">Type</th><th class="p-2">Published</th><th class="p-2">Actions</th>
+      </tr></thead>
+      <tbody>
+        ${evs.map(e=>`
+          <tr class="border-t border-white/10">
+            <td class="p-2">${e.title}</td>
+            <td class="p-2">${new Date(e.startsAt).toLocaleString()}</td>
+            <td class="p-2">${e.venue}</td>
+            <td class="p-2">${e.type}</td>
+            <td class="p-2">${e.published ? 'Yes' : 'No'}</td>
+            <td class="p-2 flex gap-2">
+              <button class="btn" onclick='editEvent(${JSON.stringify(e)})'>Edit</button>
+              <button class="btn" onclick='togglePub("${e.id}", ${!e.published})'>${e.published?'Unpublish':'Publish'}</button>
+              <button class="btn btn-danger" onclick='removeEvent("${e.id}")'>Delete</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>`;
+}
+window.editEvent = (e)=>{ const f=$('#eventForm'); f.id.value=e.id; f.title.value=e.title; f.startsAt.value=e.startsAt; f.venue.value=e.venue; f.bannerUrl.value=e.bannerUrl; f.type.value=e.type; };
+window.togglePub = async (id, pub)=>{ await patchJSON(`/api/admin/events/${id}`, { published: pub }); loadEvents(); };
+window.removeEvent = async (id)=>{ if(confirm('Delete event?')){ await del(`/api/admin/events/${id}`); loadEvents(); } };
+
+$('#eventForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const f = e.target;
+  const payload = { id:f.id.value||undefined, title:f.title.value, startsAt:f.startsAt.value, venue:f.venue.value, bannerUrl:f.bannerUrl.value, type:f.type.value };
+  if(payload.id) await patchJSON(`/api/admin/events/${payload.id}`, payload);
+  else await postJSON('/api/admin/events', payload);
+  f.reset(); loadEvents();
+});
+$('#resetEvent').addEventListener('click', ()=> $('#eventForm').reset());
+$('#refreshEvents').addEventListener('click', loadEvents);
+
+// Ticket types
+async function loadTT(){
+  const evId = $('#ttEvent').value || (await getJSON('/api/admin/events'))[0]?.id;
+  if(!evId) { $('#ttTable').innerHTML='No event'; return; }
+  if(!$('#ttEvent').value) $('#ttEvent').value = evId;
+  const rows = await getJSON(`/api/admin/ticket-types?eventId=${evId}`);
+  $('#ttTable').innerHTML = `
+    <table class="min-w-full">
+      <thead><tr class="text-left"><th class="p-2">Name</th><th class="p-2">Price</th><th class="p-2">Actions</th></tr></thead>
+      <tbody>
+        ${rows.map(r=>`
+          <tr class="border-t border-white/10">
+            <td class="p-2">${r.name}</td>
+            <td class="p-2">USD ${r.price.toFixed(2)}</td>
+            <td class="p-2"><button class="btn btn-danger" onclick='delTT("${r.id}")'>Remove</button></td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+$('#ttEvent').addEventListener('change', loadTT);
+$('#addTT').addEventListener('click', async ()=>{
+  const eventId = $('#ttEvent').value; const name=$('#ttName').value.trim(); const price=parseFloat($('#ttPrice').value||'0');
+  if(!eventId || !name) return alert('Select event and enter a name');
+  await postJSON('/api/admin/ticket-types', { eventId, name, price });
+  $('#ttName').value=''; $('#ttPrice').value='0'; loadTT();
+});
+window.delTT = async (id)=>{ await del(`/api/admin/ticket-types/${id}`); loadTT(); };
+$('#refreshTT').addEventListener('click', loadTT);
+
+// Attendees
+async function loadAttendees(){
+  const ev = $('#aEvent').value; if(!ev){ $('#attTable').innerHTML='Choose an event'; $('#exportCsv').href='#'; return; }
+  const q = $('#aQuery').value||'';
+  const list = await getJSON(`/api/admin/attendees?eventId=${encodeURIComponent(ev)}&q=${encodeURIComponent(q)}`);
+  $('#exportCsv').href = `/api/admin/export/${encodeURIComponent(ev)}.csv`;
+  $('#attTable').innerHTML = `
+    <table class="min-w-full">
+      <thead><tr class="text-left"><th class="p-2">Name</th><th class="p-2">Email</th><th class="p-2">Phone</th><th class="p-2">Type</th><th class="p-2">Status</th></tr></thead>
+      <tbody>
+        ${list.map(a=>`
+          <tr class="border-t border-white/10">
+            <td class="p-2">${a.first_name} ${a.last_name}</td>
+            <td class="p-2">${a.email}</td>
+            <td class="p-2">${a.phone||''}</td>
+            <td class="p-2">${a.kind}</td>
+            <td class="p-2">${a.status}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+$('#aEvent').addEventListener('change', loadAttendees);
+$('#aQuery').addEventListener('input', ()=>{ clearTimeout(window._ts); window._ts=setTimeout(loadAttendees, 300); });
+$('#refreshAtt').addEventListener('click', loadAttendees);
+
+// init
+loadEvents().then(loadTT).then(loadAttendees);
+</script>
+</body>
+</html>

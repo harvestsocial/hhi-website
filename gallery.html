@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="assets/fav.png" />
+  <title>30 Years of Harvest | Photo Gallery</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { hhi:{ bg:'#0b0d12', card:'#11131a', brand:'#22d3ee', brand2:'#8b5cf6' } },
+          boxShadow:{ card:'0 10px 30px rgba(0,0,0,.35)' },
+          keyframes:{
+            floatUp:{'0%':{opacity:0,transform:'translateY(18px) scale(.98)'},'60%':{opacity:1,transform:'translateY(-4px) scale(1.01)'},'100%':{opacity:1,transform:'translateY(0) scale(1)'}}
+          },
+          animation:{ floatUp:'floatUp .9s cubic-bezier(.2,.65,.2,1) both' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .hero-grad{background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(11,13,18,.95))}
+    .masonry{column-count:1; column-gap:1.25rem}
+    @media(min-width:640px){ .masonry{column-count:2} }
+    @media(min-width:1024px){ .masonry{column-count:3} }
+    .masonry img{width:100%; margin-bottom:1.25rem; border-radius:1.25rem; box-shadow:0 12px 32px rgba(0,0,0,.45); display:block; cursor:pointer}
+    .reveal{opacity:0; transform:translateY(18px) scale(.98)}
+    .reveal.show{opacity:1; transform:none; animation:floatUp .9s cubic-bezier(.2,.65,.2,1) both}
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.85); display:flex; align-items:center; justify-content:center; padding:1.5rem; z-index:60}
+    .lightbox.hidden{display:none}
+    .lightbox img{max-width:min(90vw,1000px); max-height:80vh; width:auto; height:auto; border-radius:1rem; box-shadow:0 20px 60px rgba(0,0,0,.6)}
+    .lightbox button{position:absolute; background:rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.2); color:#fff; padding:.65rem; border-radius:999px; transition:background .2s ease; display:flex; align-items:center; justify-content:center}
+    .lightbox button:hover{background:rgba(255,255,255,.15)}
+    #lightboxClose{top:2rem; right:2rem}
+    #lightboxPrev{left:2rem}
+    #lightboxNext{right:2rem}
+    @media(max-width:640px){
+      #lightboxPrev{left:.75rem}
+      #lightboxNext{right:.75rem}
+      #lightboxClose{top:1rem; right:1rem}
+    }
+  </style>
+</head>
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <section class="relative hero-grad">
+      <img src="assets/gallery-hero.jpg" alt="30 years of Harvest" class="absolute inset-0 -z-10 w-full h-full object-cover opacity-40">
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-24 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] text-hhi-brand uppercase">Harvest House International</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold">30 Years of Harvest</h1>
+        <div class="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2"></div>
+        <p class="mt-5 text-white/80">A visual journey from living-room beginnings to a global movement. Swipe through memories, crusades, worship moments, and the faces that built HHI.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button data-album="worship" class="album-tab inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold hover:bg-white/10">Worship &amp; Services</button>
+          <button data-album="conference" class="album-tab inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold hover:bg-white/10">Conferences</button>
+          <button data-album="outreach" class="album-tab inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold hover:bg-white/10">Outreach &amp; Community</button>
+        </div>
+        <div id="galleryGrid" class="masonry reveal"></div>
+      </div>
+    </section>
+
+    <div id="lightbox" class="lightbox hidden" aria-hidden="true" role="dialog" aria-label="Gallery viewer">
+      <button id="lightboxClose" aria-label="Close gallery view">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <button id="lightboxPrev" aria-label="View previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <img id="lightboxImage" src="" alt="Expanded gallery item">
+      <button id="lightboxNext" aria-label="View next image">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#0a0c10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-8 text-sm">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2">
+          <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+          <span class="font-semibold">Harvest House International</span>
+        </div>
+        <p class="text-white/70">Taking the nations for Jesus.</p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+          </a>
+          <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="index.html#about" class="hover:text-white">About HHI</a></li>
+          <li><a href="global.html" class="hover:text-white">Global Hubs</a></li>
+          <li><a href="bible school.html" class="hover:text-white">Bible School</a></li>
+          <li><a href="home groups.html" class="hover:text-white">Home Groups</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Explore</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="declarations.html" class="hover:text-white">Declarations 2026</a></li>
+          <li><a href="events.html" class="hover:text-white">Events</a></li>
+          <li><a href="books.html" class="hover:text-white">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p class="text-white/75">Need media or archive material? Reach out to the communications team.</p>
+        <a href="mailto:info@harvesthouseintl.org" class="mt-2 inline-block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">info@harvesthouseintl.org</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 text-xs text-white/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+        <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('backToTop')?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    const allImages = [
+      '-19.jpg',
+      '6.jpg',
+      '7.jpg',
+      'S2-22.jpg',
+      'S2-23.jpg',
+      'S5-113.jpg',
+      'S5-134.jpg',
+      'S5-140.jpg',
+      'S5-141.jpg',
+      'S5-153.jpg',
+      'S5-155.jpg',
+      'S5-156.jpg',
+      'S5-16.jpg',
+      'S5-168.jpg',
+      'S5-169.jpg',
+      'S5-171.jpg',
+      'S5-203.jpg',
+      'S5-209.jpg',
+      'S5-21.jpg',
+      'S5-215.jpg',
+      'S5-219.jpg',
+      'S5-226.jpg',
+      'S5-23.jpg',
+      'S5-230.jpg',
+      'S5-231.jpg',
+      'S5-238.jpg',
+      'S5-240.jpg',
+      'S5-253.jpg',
+      'S5-265.jpg',
+      'S5-269.jpg',
+      'S5-271.jpg',
+      'S5-274.jpg',
+      'S5-275.jpg',
+      'S5-279.jpg',
+      'S5-280.jpg',
+      'S5-282.jpg',
+      'S5-285.jpg',
+      'S5-291.jpg',
+      'S5-292.jpg',
+      'S5-293.jpg',
+      'S5-298.jpg',
+      'S5-40.jpg',
+      'S5-47.jpg',
+      'S5-50.jpg',
+      'S5-66.jpg',
+      'S509.jpg',
+      'S510.jpg',
+      'S526.jpg',
+      'S531.jpg',
+      'S537.jpg',
+      'S538.jpg'
+    ];
+    const albums = [
+      { id: 'worship', name: 'Worship & Services', images: allImages.slice(0, 18) },
+      { id: 'conference', name: 'Conferences', images: allImages.slice(18, 36) },
+      { id: 'outreach', name: 'Outreach & Community', images: allImages.slice(36) }
+    ];
+    const galleryGrid = document.getElementById('galleryGrid');
+    const albumTabs = document.querySelectorAll('.album-tab');
+    let currentAlbum = 'worship';
+    let currentImages = [];
+
+    const renderGallery = (albumId) => {
+      const album = albums.find(a => a.id === albumId) || albums[0];
+      currentAlbum = album.id;
+      currentImages = album.images;
+      albumTabs.forEach(btn => {
+        const isActive = btn.dataset.album === currentAlbum;
+        btn.classList.toggle('bg-white/10', isActive);
+        btn.classList.toggle('border-hhi-brand/50', isActive);
+      });
+      if (galleryGrid) {
+        galleryGrid.innerHTML = currentImages.map((file, index)=>{
+          const label = file.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ').trim() || `Image ${index+1}`;
+          return `<img src="assets/gallery/${file}" data-index="${index}" alt="Harvest House gallery ${label}">`;
+        }).join('');
+      }
+      attachImageClicks();
+    };
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    let currentIndex = 0;
+
+    function updateLightbox(index){
+      if (!currentImages[index]) return;
+      currentIndex = index;
+      const file = currentImages[currentIndex];
+      const label = file.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ').trim() || `Image ${currentIndex+1}`;
+      lightboxImage.src = `assets/gallery/${file}`;
+      lightboxImage.alt = `Harvest House gallery ${label}`;
+    }
+    function openLightbox(index){
+      updateLightbox(index);
+      lightbox.classList.remove('hidden');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      lightbox.classList.add('hidden');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function stepLightbox(direction){
+      const nextIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+      updateLightbox(nextIndex);
+    }
+
+    function attachImageClicks(){
+      galleryGrid?.querySelectorAll('img').forEach(img=>{
+        img.addEventListener('click', ()=>{
+          const idx = parseInt(img.dataset.index || '0', 10);
+          openLightbox(idx);
+        });
+      });
+    }
+
+    albumTabs.forEach(btn => {
+      btn.addEventListener('click', () => renderGallery(btn.dataset.album));
+    });
+    renderGallery(currentAlbum);
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightboxPrev?.addEventListener('click', ()=> stepLightbox(-1));
+    lightboxNext?.addEventListener('click', ()=> stepLightbox(1));
+    lightbox?.addEventListener('click', (event)=>{
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event)=>{
+      if (lightbox.classList.contains('hidden')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowRight') stepLightbox(1);
+      if (event.key === 'ArrowLeft') stepLightbox(-1);
+    });
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver((entries, obs)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=> el.classList.add('show'));
+    }
+
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+      mobileMenuButton.addEventListener('click', ()=>{
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+      mobileMenu.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=> setMenuState(false));
+      });
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+      document.addEventListener('keydown', (event)=>{
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+  </script>
+</body>
+</html>

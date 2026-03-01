@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/fav.png" />
+  <title>Sermons | Harvest House International</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            hhi: {
+              bg: '#090b11',
+              card: '#10121a',
+              brand: '#22d3ee',
+              brand2: '#8b5cf6'
+            }
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(0,0,0,.45)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-backdrop {
+      background: radial-gradient(circle at 20% 20%, rgba(34,211,238,.12), transparent 45%),
+                  radial-gradient(circle at 80% 0%, rgba(139,92,246,.18), transparent 50%),
+                  linear-gradient(135deg, #0b0f19, #05070d);
+    }
+    .sermon-card{
+      background: linear-gradient(145deg, rgba(16,18,26,.95), rgba(12,14,20,.85));
+      border: 1px solid rgba(255,255,255,.08);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .sermon-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(34,211,238,.4);
+      box-shadow: 0 20px 55px rgba(0,0,0,.55);
+    }
+  </style>
+</head>
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold tracking-tight">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="sermons.html" class="text-hhi-brand">SERMONS</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3 text-sm">
+        <a href="salvation.html" class="block hover:text-hhi-brand">JESUS</a>
+        <a href="index.html#about" class="block hover:text-hhi-brand">WHO WE ARE</a>
+        <a href="books.html" class="block hover:text-hhi-brand">BOOKS</a>
+        <a href="global.html" class="block hover:text-hhi-brand">GLOBAL</a>
+        <a href="bible school.html" class="block hover:text-hhi-brand">BIBLE SCHOOL</a>
+        <a href="declarations.html" class="block hover:text-hhi-brand">DECLARATIONS</a>
+        <a href="get involved.html" class="block hover:text-hhi-brand">GET INVOLVED</a>
+        <a href="location.html" class="block hover:text-hhi-brand">LOCATION</a>
+        <a href="sermons.html" class="block text-hhi-brand">SERMONS</a>
+        <a href="index.html#giving" class="inline-flex w-full items-center justify-center rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-20">
+    <section class="pt-20 pb-16" style="background: linear-gradient(180deg, rgba(9,11,17,0.8), rgba(9,11,17,0.95)), url('assets/live.jpg') center/cover no-repeat;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm uppercase tracking-[0.4em] text-white/60">Watch &amp; Listen</p>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold">Sermons</h1>
+        <p class="mt-4 text-white/70 text-lg max-w-3xl">Looking for hope or direction? Search and discover the latest messages from Harvest House International to encourage you in every season.</p>
+        <div class="mt-8 flex flex-wrap gap-4 items-center">
+          <label class="flex items-center gap-3 rounded-full bg-black/30 border border-white/10 px-5 py-3 w-full sm:w-auto sm:min-w-[320px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.5 5.5a7.5 7.5 0 0011.15 11.15z" />
+            </svg>
+            <input id="sermon-search" type="text" placeholder="Search sermons" class="bg-transparent border-0 focus:outline-none focus:ring-0 placeholder-white/50 flex-1" />
+          </label>
+          <button id="filter-toggle" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold tracking-wide hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h6m0 0l3-3m-3 3l3 3M21 19h-6m0 0l-3 3m3-3l-3-3M3 19h6m0 0l3-3m-3 3l3 3" />
+            </svg>
+            Filters
+          </button>
+        </div>
+        <div id="sermon-filter-panel" class="mt-4 hidden w-full max-w-md rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur">
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold text-white">Filters</p>
+            <button id="filter-close" class="text-white/60 hover:text-white text-sm">Close</button>
+          </div>
+          <div class="mt-3 space-y-3 text-sm text-white/80">
+            <label class="flex items-center gap-2">
+              <span class="w-28 text-white/60">Sort by</span>
+              <select id="sermon-sort" class="bg-black/40 border border-white/15 rounded-lg px-3 py-2 flex-1">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+              </select>
+            </label>
+            <label class="flex items-center gap-2">
+              <span class="w-28 text-white/60">Duration</span>
+              <select id="sermon-duration" class="bg-black/40 border border-white/15 rounded-lg px-3 py-2 flex-1">
+                <option value="all">All</option>
+                <option value="shorts">Shorts (≤ 90s)</option>
+                <option value="long">Long form (≥ 10m)</option>
+              </select>
+            </label>
+            <div class="flex items-center gap-3">
+              <span class="w-28 text-white/60">Live</span>
+              <button id="sermon-live-toggle" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold tracking-wide hover:bg-white/10">
+                <span data-live-label-on class="hidden">Live only</span>
+                <span data-live-label-off>All videos</span>
+              </button>
+            </div>
+            <button id="filter-reset" class="mt-2 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold tracking-wide hover:bg-white/10">Reset filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 -mt-10">
+      <div id="sermon-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <div id="sermon-empty" class="hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-white/70 mt-4">
+        No sermons are available right now. Please check back soon.
+      </div>
+      <div id="sermon-error" class="hidden rounded-2xl border border-red-400/40 bg-red-500/10 p-4 text-sm text-red-100 mt-4"></div>
+      <div id="sermon-loading" class="flex flex-col items-center justify-center gap-3 py-10 text-white/80">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.5 5.5a7.5 7.5 0 0011.15 11.15z" />
+        </svg>
+        <div class="text-lg font-semibold">Loading</div>
+        <p class="text-sm text-white/60">Please wait while we pull more sermons.</p>
+      </div>
+      <div id="sermon-sentinel" class="h-10"></div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#0a0c10] py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-sm text-white/60">
+      <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+      <a href="index.html#top" class="hover:text-white">Back to top ↗</a>
+    </div>
+  </footer>
+
+  <script src="assets/youtube-config.js"></script>
+  <script src="assets/sermons-infinite.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+      mobileMenuButton.addEventListener('click', () => {
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuState(false)));
+    }
+  </script>
+</body>
+</html>

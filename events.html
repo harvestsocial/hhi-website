@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HHI — Events</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+
+  <!-- Tailwind CDN -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            hhi: { bg: '#0b0d12', card: '#11131a', brand: '#22d3ee', brand2: '#8b5cf6' }
+          },
+          boxShadow: {
+            card: '0 10px 30px rgba(0,0,0,.35)',
+            lift: '0 12px 28px rgba(0,0,0,.45)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .page-gradient{
+      background:
+        radial-gradient(1000px 500px at 10% 10%, rgba(139,92,246,.22), transparent 60%),
+        radial-gradient(1200px 600px at 90% 40%, rgba(34,211,238,.16), transparent 60%);
+    }
+    /* Glow + zoom */
+    .event-card{
+      transition: box-shadow .3s ease, transform .25s ease, filter .25s ease;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .event-card:hover{
+      box-shadow:
+        0 0 0 1px rgba(139,92,246,.45),
+        0 12px 32px rgba(0,0,0,.55),
+        0 0 42px rgba(139,92,246,.45);
+      transform: translateY(-2px);
+    }
+    .event-thumb{
+      transition: transform .35s ease;
+    }
+    .event-card:hover .event-thumb{
+      transform: scale(1.02);
+    }
+    .event-badge{
+      position:absolute;
+      top:1rem;
+      left:1rem;
+      padding:.35rem 1rem;
+      border-radius:999px;
+      font-size:.7rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      background:rgba(0,0,0,.65);
+      border:1px solid rgba(255,255,255,.15);
+    }
+    .register-btn{
+      border-radius:999px;
+      padding:.65rem 1.75rem;
+      font-size:.8rem;
+      font-weight:600;
+      background:linear-gradient(120deg, #22d3ee, #8b5cf6);
+      color:#020617;
+      transition:opacity .2s ease;
+    }
+    .register-btn:hover{
+      opacity:.9;
+    }
+    .glow{
+      transition:box-shadow .28s ease, transform .28s ease;
+    }
+    .glow:hover{
+      transform:translateY(-2px);
+      box-shadow:
+        0 0 0 1px rgba(139,92,246,.45),
+        0 12px 32px rgba(0,0,0,.55),
+        0 0 42px rgba(139,92,246,.45);
+    }
+    .modal-overlay{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.7);
+      z-index:60;
+      padding:1.5rem;
+      overflow:auto;
+    }
+    .modal-overlay.open{ display:flex; }
+    .modal-panel{
+      width:100%;
+      max-width:860px;
+      max-height:88vh;
+      background:#fff;
+      border-radius:1.75rem;
+      box-shadow:0 25px 80px rgba(8,10,18,.45);
+      display:flex;
+      flex-direction:column;
+      position:relative;
+      overflow:hidden;
+    }
+    @media (min-width:768px){
+      .modal-panel{ flex-direction:row; }
+    }
+    .modal-column{
+      padding:1.75rem;
+      overflow-y:auto;
+    }
+    .modal-column.details{
+      flex:45%;
+      background:#f8fafc;
+      border-right:1px solid #e5e7eb;
+    }
+    .modal-column.form{
+      flex:55%;
+      background:#fff;
+    }
+  </style>
+</head>
+
+<body class="bg-hhi-bg text-white antialiased page-gradient min-h-screen">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90 glow">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <!-- Hero -->
+    <section class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.2em] text-hhi-brand uppercase">HHICC Events</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Events &amp; Special Gatherings</h1>
+        <p class="mt-4 max-w-2xl text-sm sm:text-base text-white/80">
+          From weekly services to once-in-a-lifetime celebrations, explore what’s happening at Harvest House International Conference Centre.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 text-sm text-white/70 lg:items-end">
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          <span>December 2025 · HHICC, Bulawayo</span>
+        </div>
+        <p class="text-xs max-w-xs lg:text-right">
+          Select an event to see details, share with friends or register online.
+        </p>
+      </div>
+    </section>
+
+    <section id="special" class="mt-12 space-y-10">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold tracking-[0.25em] text-hhi-brand uppercase">December 2025</p>
+          <h2 class="mt-2 text-3xl font-bold">Featured gatherings at HHICC</h2>
+          <p class="mt-2 text-sm text-white/70 max-w-3xl">Pick an encounter, reserve your seat and finish your payment online or via cash/WhatsApp.</p>
+        </div>
+        <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs text-white/70 self-start md:self-auto">Selbourne Brooke · Bulawayo, Zimbabwe</span>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article class="event-card rounded-3xl bg-hhi-card overflow-hidden flex flex-col">
+          <div class="relative">
+            <img src="assets/Clash of Hub Choirs 2025.jpg" alt="Clash of Hub Choirs poster" class="event-thumb h-64 w-full object-cover"/>
+            <span class="event-badge">Live Event</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col">
+            <div>
+              <p class="text-xs text-white/60 uppercase tracking-[0.2em]">Sun · 14 Dec · 14:30 CAT</p>
+              <h3 class="text-2xl font-semibold mt-1">Clash of Hub Choirs</h3>
+              <p class="mt-2 text-sm text-white/70">25+ choirs on one night, judged by Janet Manyowa, Dr. Lindelani Mkhize and Minister Tatenda Gurupira.</p>
+            </div>
+            <dl class="text-sm text-white/70 space-y-1">
+              <div class="flex gap-2">
+                <dt class="font-semibold">Venue:</dt>
+                <dd>Main Auditorium, HHICC — Selbourne Brooke (behind Fazak), Bulawayo</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold">Tickets:</dt>
+                <dd>General admission — US$5</dd>
+              </div>
+            </dl>
+            <div class="flex items-center justify-between gap-3 pt-4 mt-auto border-t border-white/10">
+              <div>
+                <p class="text-xs text-white/60">From</p>
+                <p class="text-lg font-semibold">US$5</p>
+              </div>
+              <button class="register-btn" data-event-id="clash">Register</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card rounded-3xl bg-hhi-card overflow-hidden flex flex-col">
+          <div class="relative">
+            <img src="assets/Conference Poster 2025.jpg" alt="30 Year Anniversary Conference" class="event-thumb h-64 w-full object-cover"/>
+            <span class="event-badge">Conference</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col">
+            <div>
+              <p class="text-xs text-white/60 uppercase tracking-[0.2em]">11–14 Dec · HHICC Conference Centre</p>
+              <h3 class="text-2xl font-semibold mt-1">30 Year Anniversary Conference</h3>
+              <p class="mt-2 text-sm text-white/70">Theme: The Anointing &amp; Church Growth with Bishops Colin &amp; Sarah Nyathi, Bishop Edwin Ogoe, Apostle Tavonga Vutabwashe and Bishop Emmanuel Nterful.</p>
+            </div>
+            <dl class="text-sm text-white/70 space-y-1">
+              <div class="flex gap-2">
+                <dt class="font-semibold">Registration:</dt>
+                <dd>US$5 per delegate · available across all HHI branches</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold">Schedule:</dt>
+                <dd>Day &amp; night sessions · refer to programme</dd>
+              </div>
+            </dl>
+            <div class="flex items-center justify-between gap-3 pt-4 mt-auto border-t border-white/10">
+              <div>
+                <p class="text-xs text-white/60">Per delegate</p>
+                <p class="text-lg font-semibold">US$5</p>
+              </div>
+              <button class="register-btn" data-event-id="conference">Register</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card rounded-3xl bg-hhi-card overflow-hidden flex flex-col">
+          <div class="relative">
+            <img src="assets/Mega Sunday 2025.jpg" alt="Mega Sunday" class="event-thumb h-64 w-full object-cover"/>
+            <span class="event-badge">Free Gathering</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col">
+            <div>
+              <p class="text-xs text-white/60 uppercase tracking-[0.2em]">Sun · 7 Dec · 08:30 CAT</p>
+              <h3 class="text-2xl font-semibold mt-1">Mega Sunday with Bishop Dag Heward-Mills</h3>
+              <p class="mt-2 text-sm text-white/70">All hubs united for a miracle service with Bishops Colin &amp; Sarah Nyathi hosting Bishop Dag Heward-Mills.</p>
+            </div>
+            <dl class="text-sm text-white/70 space-y-1">
+              <div class="flex gap-2">
+                <dt class="font-semibold">Venue:</dt>
+                <dd>Main Auditorium, HHICC — Selbourne Brooke, Bulawayo</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold">Cost:</dt>
+                <dd>Free entry — RSVP required for seating</dd>
+              </div>
+            </dl>
+            <div class="flex items-center justify-between gap-3 pt-4 mt-auto border-t border-white/10">
+              <div>
+                <p class="text-xs text-white/60">RSVP</p>
+                <p class="text-lg font-semibold">Free</p>
+              </div>
+              <button class="register-btn" data-event-id="mega">Reserve seat</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="event-card rounded-3xl bg-hhi-card overflow-hidden flex flex-col">
+          <div class="relative">
+            <img src="assets/Vision Dinner 2025.jpeg" alt="Vision Dinner" class="event-thumb h-64 w-full object-cover"/>
+            <span class="event-badge">Partners Dinner</span>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col">
+            <div>
+              <p class="text-xs text-white/60 uppercase tracking-[0.2em]">Sat · 13 Dec · 18:30 CAT</p>
+              <h3 class="text-2xl font-semibold mt-1">Vision Dinner</h3>
+              <p class="mt-2 text-sm text-white/70">An intimate evening with Bishops Colin &amp; Sarah Nyathi sharing testimonies, vision and future projects.</p>
+            </div>
+            <dl class="text-sm text-white/70 space-y-1">
+              <div class="flex gap-2">
+                <dt class="font-semibold">Venue:</dt>
+                <dd>HHICC Banquet Hall</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold">Tables:</dt>
+                <dd>Super Platinum (US$300) · Platinum (US$100) · VIP (US$50) · Regular (US$30)</dd>
+              </div>
+            </dl>
+            <div class="flex items-center justify-between gap-3 pt-4 mt-auto border-t border-white/10">
+              <div>
+                <p class="text-xs text-white/60">From</p>
+                <p class="text-lg font-semibold">US$30 – 300</p>
+              </div>
+              <button class="register-btn" data-event-id="vision">Register</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Event registration modal -->
+  <div id="eventRegisterModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+    <div class="modal-panel text-gray-900">
+      <button type="button" id="closeEventModal" class="absolute right-4 top-4 text-gray-500 hover:text-gray-800 z-10" aria-label="Close modal">✕</button>
+      <div class="modal-column details space-y-3" id="eventModalDetails">
+        <p class="text-xs uppercase tracking-[0.3em] text-indigo-500" id="eventModalTag">HHICC</p>
+        <h2 class="text-3xl font-bold" id="eventModalTitle">Event title</h2>
+        <p class="text-sm text-gray-600" id="eventModalDescription">Event description</p>
+        <dl class="text-sm text-gray-700 space-y-2">
+          <div>
+            <dt class="font-semibold text-gray-900">Date &amp; Time</dt>
+            <dd id="eventModalDate">—</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-gray-900">Venue</dt>
+            <dd id="eventModalVenue">—</dd>
+          </div>
+        </dl>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900">Ticket options</h3>
+          <ul id="eventModalTickets" class="mt-2 text-sm text-gray-700 space-y-1"></ul>
+        </div>
+        <div class="rounded-2xl bg-white border border-gray-200 p-4 text-sm text-gray-700">
+          <p class="font-semibold text-gray-900">Cash payments</p>
+          <p class="mt-1">Prefer to pay in cash? We’ll send you instructions via WhatsApp. Use the button in the form to talk to our team.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-600">
+            <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-1"><span>💳</span> Visa</span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-1"><span>💳</span> Mastercard</span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-1"><span>📱</span> Mobile Money</span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-1"><span></span> Pay</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-column form">
+        <form id="eventRegisterForm" class="space-y-4">
+          <input type="hidden" name="eventName" id="eventNameField">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm block">Title
+              <select name="title" id="titleField" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2">
+                <option value="">- Please select -</option>
+                <option>Apostle</option>
+                <option>Prophet</option>
+                <option>Evangelist</option>
+                <option>Pastor</option>
+                <option>Bishop</option>
+                <option>Reverend</option>
+                <option>Church Leader</option>
+                <option>Church Member</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="text-sm block">Gender
+              <select name="gender" id="genderField" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2">
+                <option value="">- Please select -</option>
+                <option>Female</option>
+                <option>Male</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm">First name
+              <input required name="firstName" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="First name">
+            </label>
+            <label class="text-sm">Last name
+              <input required name="lastName" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="Last name">
+            </label>
+          </div>
+          <label class="text-sm block">Name of Church
+            <input required name="church" id="churchField" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="e.g. Harvest House International">
+          </label>
+          <label class="text-sm block">Email address
+            <input required type="email" name="email" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="you@example.com">
+          </label>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm block">WhatsApp number
+              <input required name="phone" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="+263 77 000 0000">
+            </label>
+            <label class="text-sm block">Country
+              <input required name="country" id="countryField" value="Zimbabwe" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2">
+            </label>
+          </div>
+          <label class="text-sm block">Ticket type
+            <select id="ticketSelect" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2"></select>
+          </label>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm block">Quantity
+              <input type="number" min="1" value="1" id="ticketQty" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2">
+            </label>
+            <label class="text-sm block">Total
+              <input id="ticketTotal" class="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 font-semibold" readonly>
+            </label>
+          </div>
+          <div class="space-y-3 pt-2 border-t border-gray-200">
+            <button class="w-full rounded-full bg-emerald-600 py-2.5 font-semibold text-white hover:bg-emerald-700">Pay via Paynow</button>
+            <button type="button" id="cashPaymentButton" class="w-full rounded-full border border-gray-300 py-2.5 font-semibold text-gray-800 hover:bg-gray-100">Pay cash via WhatsApp</button>
+          </div>
+          <p class="text-xs text-gray-500 text-center">We’ll securely redirect you to PayNow to complete your payment.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-white/10 bg-[#0a0c10] py-10">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
+      <p class="text-white/70">
+        Taking the nations for Jesus.
+      </p>
+      <div class="flex items-center justify-center gap-3">
+        <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+          <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+        </a>
+        <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+          <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+          <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+        </a>
+      </div>
+      <div class="text-xs text-white/60">© <span id="year"></span> Harvest House International</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+
+      mobileMenuButton.addEventListener('click', ()=>{
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=> setMenuState(false));
+      });
+
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+
+      document.addEventListener('keydown', (event)=>{
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+
+    const EVENTS = {
+      clash: {
+        title: 'Clash of Hub Choirs',
+        tag: 'Live Event',
+        description: '25+ choirs in one explosive night of worship and praise.',
+        date: 'Sunday · 14 December 2025 · 14:30 CAT',
+        venue: 'Main Auditorium, HHICC — Selbourne Brooke (behind Fazak), Bulawayo',
+        reference: 'Clash of Hub Choirs',
+        tickets: [
+          { label: 'General Admission — US$5', price: 5 }
+        ]
+      },
+      conference: {
+        title: '30 Year Anniversary Conference',
+        tag: 'Conference',
+        description: 'Theme: The Anointing & Church Growth — four days of Word, impartation and celebration.',
+        date: '11 – 14 December 2025 · Refer to daily programme',
+        venue: 'HHICC Conference Centre, Selbourne Brooke, Bulawayo',
+        reference: '30 Year Conference',
+        tickets: [
+          { label: 'Delegate Registration — US$5', price: 5 }
+        ]
+      },
+      mega: {
+        title: 'Mega Sunday with Bishop Dag Heward-Mills',
+        tag: 'Free Gathering',
+        description: 'A mega gathering hosted by Bishops Colin & Sarah Nyathi with Bishop Dag Heward-Mills.',
+        date: 'Sunday · 7 December 2025 · 08:30 CAT',
+        venue: 'Main Auditorium, HHICC — Selbourne Brooke, Bulawayo',
+        reference: 'Mega Sunday RSVP',
+        tickets: [
+          { label: 'RSVP — Free', price: 0 }
+        ]
+      },
+      vision: {
+        title: 'Vision Dinner',
+        tag: 'Partners Dinner',
+        description: 'An intimate evening with Bishops Colin & Sarah Nyathi sharing vision, testimonies and future plans.',
+        date: 'Saturday · 13 December 2025 · 18:30 CAT',
+        venue: 'HHICC Banquet Hall',
+        reference: 'Vision Dinner',
+        tickets: [
+          { label: 'Super Platinum — US$300', price: 300 },
+          { label: 'Platinum — US$100', price: 100 },
+          { label: 'VIP — US$50', price: 50 },
+          { label: 'Regular — US$30', price: 30 }
+        ]
+      }
+    };
+
+    const modal = document.getElementById('eventRegisterModal');
+    const closeModalBtn = document.getElementById('closeEventModal');
+    const form = document.getElementById('eventRegisterForm');
+    const modalTitle = document.getElementById('eventModalTitle');
+    const modalTag = document.getElementById('eventModalTag');
+    const modalDescription = document.getElementById('eventModalDescription');
+    const modalDate = document.getElementById('eventModalDate');
+    const modalVenue = document.getElementById('eventModalVenue');
+    const modalTickets = document.getElementById('eventModalTickets');
+    const ticketSelect = document.getElementById('ticketSelect');
+    const qtyInput = document.getElementById('ticketQty');
+    const totalInput = document.getElementById('ticketTotal');
+    const eventNameField = document.getElementById('eventNameField');
+    const cashBtn = document.getElementById('cashPaymentButton');
+
+    let activeEvent = null;
+
+    const PAYNOW_EMAIL = 'admin@hhicc.org.zw';
+    const CASH_NUMBER = '263786393348';
+
+    const buildPaynowUrl = (amount, reference) => {
+      const params = new URLSearchParams({
+        search: PAYNOW_EMAIL,
+        amount: amount.toFixed(2),
+        reference,
+        l: '1'
+      });
+      const encoded = btoa(params.toString());
+      return `https://www.paynow.co.zw/Payment/Link/?q=${encodeURIComponent(encoded)}`;
+    };
+
+    const updateTotal = () => {
+      if (!activeEvent) return;
+      const idx = parseInt(ticketSelect.value, 10);
+      const ticket = activeEvent.tickets[idx];
+      const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+      qtyInput.value = qty;
+      if (!ticket) {
+        totalInput.value = '';
+        return;
+      }
+      const total = ticket.price * qty;
+      totalInput.value = ticket.price === 0 ? 'Free' : `USD ${total.toFixed(2)}`;
+    };
+
+    const openModal = (eventId) => {
+      const data = EVENTS[eventId];
+      if (!data) return;
+      activeEvent = data;
+      eventNameField.value = data.title;
+      modalTitle.textContent = data.title;
+      modalTag.textContent = data.tag;
+      modalDescription.textContent = data.description;
+      modalDate.textContent = data.date;
+      modalVenue.textContent = data.venue;
+      modalTickets.innerHTML = data.tickets.map(t => `<li>${t.label}</li>`).join('');
+      ticketSelect.innerHTML = data.tickets.map((ticket, index) => `<option value=\"${index}\">${ticket.label}</option>`).join('');
+      ticketSelect.value = '0';
+      qtyInput.value = '1';
+      updateTotal();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      form.reset();
+      totalInput.value = '';
+      activeEvent = null;
+    };
+
+    document.querySelectorAll('.register-btn').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.eventId));
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    ticketSelect.addEventListener('change', updateTotal);
+    qtyInput.addEventListener('input', updateTotal);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!activeEvent) return;
+      const ticket = activeEvent.tickets[parseInt(ticketSelect.value, 10)];
+      const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+      const total = ticket ? ticket.price * qty : 0;
+
+      if (!ticket) return;
+
+      if (ticket.price === 0) {
+        alert(`RSVP received for ${activeEvent.title}! We’ll be in touch.`);
+        closeModal();
+        return;
+      }
+
+      const paynowUrl = buildPaynowUrl(total || 0, activeEvent.reference);
+      window.open(paynowUrl, '_blank', 'noopener');
+      closeModal();
+    });
+
+    cashBtn.addEventListener('click', () => {
+      if (!activeEvent) return;
+      const formData = new FormData(form);
+      const first = formData.get('firstName') || '';
+      const last = formData.get('lastName') || '';
+      const email = formData.get('email') || '';
+      const phone = formData.get('phone') || '';
+      const title = formData.get('title') || '';
+      const gender = formData.get('gender') || '';
+      const church = formData.get('church') || '';
+      const country = formData.get('country') || '';
+      const ticket = activeEvent.tickets[parseInt(ticketSelect.value, 10)];
+      const qty = Math.max(1, parseInt(qtyInput.value || '1', 10));
+      const amount = ticket ? ticket.price * qty : 0;
+
+      const lines = [
+        `HHI Events Cash Payment`,
+        ``,
+        `Event: ${activeEvent.title}`,
+        ticket ? `Ticket: ${ticket.label}` : '',
+        `Quantity: ${qty}`,
+        ticket && ticket.price > 0 ? `Amount: USD ${amount.toFixed(2)}` : 'This is a free RSVP',
+        title ? `Title: ${title}` : '',
+        gender ? `Gender: ${gender}` : '',
+        first || last ? `Name: ${first} ${last}`.trim() : '',
+        church ? `Church: ${church}` : '',
+        phone ? `Phone: ${phone}` : '',
+        email ? `Email: ${email}` : '',
+        country ? `Country: ${country}` : ''
+      ].filter(Boolean);
+
+      const message = encodeURIComponent(lines.join('\n'));
+      window.open(`https://wa.me/${CASH_NUMBER}?text=${message}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HHI Global | Our Hubs Around the World</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+
+  <!-- Tailwind -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { hhi:{ bg:'#0b0d12', card:'#11131a', brand:'#8b5cf6', brand2:'#22d3ee' }},
+          boxShadow:{ card:'0 10px 30px rgba(0,0,0,.35)' },
+          keyframes:{
+            floatUp:{'0%':{opacity:0,transform:'translateY(18px) scale(.98)'},'60%':{opacity:1,transform:'translateY(-4px) scale(1.01)'},'100%':{opacity:1,transform:'translateY(0) scale(1)'}}
+          },
+          animation:{ floatUp:'floatUp .9s cubic-bezier(.2,.65,.2,1) both' }
+        }
+      }
+    }
+  </script>
+
+  <!-- 3D Globe (Three.js) -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+
+  <style>
+    html{scroll-behavior:smooth}
+    .hero-grad{background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(11,13,18,.95))}
+    .page-backdrop{
+      background:
+        radial-gradient(1200px 600px at 70% 10%, rgba(139,92,246,.18), transparent 60%),
+        radial-gradient(900px 450px at 15% 70%, rgba(34,211,238,.12), transparent 60%);
+    }
+    .glow{transition:box-shadow .28s ease, transform .28s ease}
+    .glow:hover{transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,92,246,.45), 0 12px 32px rgba(0,0,0,.55), 0 0 42px rgba(139,92,246,.45)}
+    .chip{transition:background .2s ease, color .2s ease}
+    .reveal{opacity:0; transform:translateY(18px) scale(.98)}
+    .reveal.show{opacity:1; transform:none; animation:floatUp .9s cubic-bezier(.2,.65,.2,1) both}
+    /* smooth card hover like your Events */
+    .card{background-color:#11131a; border:1px solid rgba(255,255,255,.08); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .card:hover{transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,92,246,.35), 0 12px 28px rgba(0,0,0,.55)}
+    .badge{background:rgba(139,92,246,.18); color:#c7b9ff}
+    /* hero globe container keeps canvas contained */
+    #globeWrap{position:relative; width:100%; height:420px}
+    @media (min-width:1024px){ #globeWrap{height:520px} }
+  </style>
+</head>
+
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90 glow">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO with 3D globe -->
+  <section class="relative pt-24 lg:pt-28 min-h-[420px] lg:min-h-[520px]">
+    <div class="absolute inset-0 -z-10 hero-grad">
+      <img src="assets/global.jpg" class="w-full h-full object-cover" alt="Congregation backdrop"/>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center py-14 lg:py-24">
+      <div class="reveal">
+        <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight">Global<br/>Presence</h1>
+        <div class="mt-4 h-1.5 w-32 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2"></div>
+        <p class="mt-5 text-white/80 max-w-xl">
+          Harvest House International is present in <strong>30 countries</strong> with over <strong>150</strong> locations,
+          spreading the message of Jesus Christ and making disciples of all nations.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div id="globeWrap" class="rounded-[24px] border border-black/0 bg-black/0 overflow-hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finder -->
+  <section class="page-backdrop pb-4">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold">Find a Harvest House Near You</h2>
+
+      <!-- Search -->
+      <div class="mt-6 flex items-center gap-3 rounded-xl bg-black/50 border border-white/10 px-4 py-3 shadow-card">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white/50" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.48-5.34C14.85 5.59 12.3 3 9.25 3S3.65 5.59 3.65 8.39s2.55 5.39 5.6 5.39c1.61 0 3.07-.59 4.19-1.57l.27.28v.79l4.25 4.25 1.27-1.27L15.5 14zm-6.25 0C7 14 5.15 12.21 5.15 10s1.85-4 4.1-4S13.35 7.79 13.35 10s-1.85 4-4.1 4z"/></svg>
+        <input id="search" class="w-full bg-transparent outline-none placeholder-white/40" placeholder="Search for a country or city..."/>
+      </div>
+
+      <!-- Region chips -->
+      <div class="mt-4 flex flex-wrap gap-2 justify-center">
+        <button data-region="all" class="chip px-3 py-1.5 rounded-full bg-hhi-brand text-white">All Regions</button>
+        <button data-region="west-africa" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">West Africa</button>
+        <button data-region="southern-africa" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">Southern Africa</button>
+        <button data-region="east-africa" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">East Africa</button>
+        <button data-region="europe" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">Europe</button>
+        <button data-region="asia" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">Asia</button>
+        <button data-region="caribbean" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">Caribbean</button>
+        <button data-region="north-america" class="chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">North America</button>
+      </div>
+
+      <p id="stats" class="mt-3 text-sm text-white/60">Found <span id="locCount">158</span> locations in <span id="countryCount">30</span> countries across <span id="regionCount">7</span> regions</p>
+    </div>
+
+    <!-- Countries list -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-8 grid md:grid-cols-2 gap-5" id="countryGrid">
+      <!-- Cards are injected by JS from the dataset below -->
+    </div>
+  </section>
+
+  <!-- Help strip -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h3 class="text-2xl sm:text-3xl font-extrabold">Need Help Finding a Church?</h3>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <a href="https://wa.me/00000000000" target="_blank" class="card glow rounded-xl px-5 py-4 flex items-center gap-3">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-hhi-brand/25 text-hhi-brand">📞</span>
+          <div class="text-left">
+            <div class="font-semibold">+263 00 000 0000</div>
+            <div class="text-xs text-white/60">WhatsApp us for directions</div>
+          </div>
+        </a>
+        <a href="mailto:info@harvesthouseintl.org" class="card glow rounded-xl px-5 py-4 flex items-center gap-3">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-hhi-brand/25 text-hhi-brand">✉️</span>
+          <div class="text-left">
+            <div class="font-semibold">Email Us</div>
+            <div class="text-xs text-white/60">info@harvesthouseintl.org</div>
+          </div>
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-white/55">Our team will help you find the nearest location and answer any questions about services and activities.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#0a0c10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-8 text-sm">
+      <div class="space-y-3 reveal">
+        <div class="inline-flex items-center gap-2">
+          <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+          <span class="font-semibold">Harvest House International</span>
+        </div>
+        <p class="text-white/70">
+          Taking the nations for Jesus.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+          </a>
+          <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="jesus.html" class="hover:text-white">Jesus / Salvation</a></li>
+          <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+          <li><a href="index.html#music" class="hover:text-white">Harvest Music</a></li>
+          <li><a href="index.html#giving" class="hover:text-white">Give</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Service Times</h4>
+        <ul class="space-y-2 text-white/75">
+          <li>Sunday Services</li>
+          <li>8:30 AM – Morning Service</li>
+          <li>12:00 PM – Second Service</li>
+          <li class="text-xs">(Update to your actual times)</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p class="text-white/75">We’d love to help with your next steps.</p>
+        <a href="mailto:info@harvesthouseintl.org" class="mt-2 inline-block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5 glow">info@harvesthouseintl.org</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-xs text-white/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+        <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DATA + SCRIPTS -->
+  <script>
+    // Footer basics
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('backToTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Reveal-once animations
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      const io = new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show'); obs.unobserve(e.target);}}),{threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    } else { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show')); }
+
+    // --- Countries dataset (dummy; replace with your real data) ---
+    const DATA = [
+      { country:'Ghana', region:'west-africa', locations:28, sub:'West Africa' },
+      { country:'Nigeria', region:'west-africa', locations:15, sub:'West Africa' },
+      { country:'Zimbabwe', region:'southern-africa', locations:22, sub:'Southern Africa' },
+      { country:'South Africa', region:'southern-africa', locations:7, sub:'Southern Africa' },
+      { country:'Kenya', region:'east-africa', locations:6, sub:'East Africa' },
+      { country:'Uganda', region:'east-africa', locations:4, sub:'East Africa' },
+      { country:'United Kingdom', region:'europe', locations:12, sub:'Europe' },
+      { country:'Switzerland', region:'europe', locations:5, sub:'Europe' },
+      { country:'Sweden', region:'europe', locations:3, sub:'Europe' },
+      { country:'China', region:'asia', locations:5, sub:'Asia' },
+      { country:'Philippines', region:'asia', locations:3, sub:'Asia' },
+      { country:'USA', region:'north-america', locations:8, sub:'North America' },
+      { country:'Canada', region:'north-america', locations:2, sub:'North America' },
+      { country:'Dominica', region:'caribbean', locations:1, sub:'Caribbean' },
+      { country:'Grenada', region:'caribbean', locations:1, sub:'Caribbean' },
+    ];
+
+    // Render cards
+    const grid = document.getElementById('countryGrid');
+    function cardHTML(item){
+      return `
+        <div class="card rounded-2xl p-5 reveal">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-semibold">${item.country}</h4>
+            <span class="badge text-xs px-3 py-1 rounded-full">${item.locations} location${item.locations>1?'s':''}</span>
+          </div>
+          <div class="text-xs text-white/60 mt-1">${item.sub}</div>
+        </div>`;
+    }
+    function render(list){
+      grid.innerHTML = list.map(cardHTML).join('');
+      // attach reveal to new nodes
+      if(!reduce){
+        const io2 = new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show'); obs.unobserve(e.target);}}),{threshold:.15});
+        grid.querySelectorAll('.reveal').forEach(el=>io2.observe(el));
+      } else { grid.querySelectorAll('.reveal').forEach(el=>el.classList.add('show')); }
+      // update stats
+      const countries = new Set(list.map(i=>i.country)).size;
+      const locs = list.reduce((a,b)=>a+b.locations,0);
+      const regions = new Set(list.map(i=>i.region)).size;
+      document.getElementById('countryCount').textContent = countries;
+      document.getElementById('locCount').textContent = locs;
+      document.getElementById('regionCount').textContent = regions;
+    }
+    render(DATA);
+
+    // Search + region filtering
+    let activeRegion = 'all';
+    const search = document.getElementById('search');
+    function applyFilters(){
+      const q = (search.value||'').toLowerCase();
+      const filtered = DATA.filter(i=>{
+        const regionOK = activeRegion==='all' || i.region===activeRegion;
+        const textOK = i.country.toLowerCase().includes(q) || i.sub.toLowerCase().includes(q);
+        return regionOK && textOK;
+      });
+      render(filtered);
+    }
+    search.addEventListener('input', applyFilters);
+    document.querySelectorAll('[data-region]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        activeRegion = btn.dataset.region;
+        // toggle chip styles
+        document.querySelectorAll('[data-region]').forEach(b=>b.className = 'chip px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10');
+        btn.className = 'chip px-3 py-1.5 rounded-full bg-hhi-brand text-white';
+        applyFilters();
+      });
+    });
+
+    // Mobile navigation toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+
+      mobileMenuButton.addEventListener('click', ()=>{
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=> setMenuState(false));
+      });
+
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+
+      document.addEventListener('keydown', (event)=>{
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+
+    // --- 3D GLOBE (simple, smooth rotation) ---
+    // Textures from unpkg (no auth). Swap to your own if needed.
+    const TEX = {
+      map: 'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',
+      bump:'https://unpkg.com/three-globe/example/img/earth-topology.png',
+      spec:'https://unpkg.com/three-globe/example/img/earth-water.png'
+    };
+
+    const wrap = document.getElementById('globeWrap');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(50, wrap.clientWidth / wrap.clientHeight, 0.1, 1000);
+    camera.position.set(0, 0, 3.2);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    wrap.appendChild(renderer.domElement);
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+    const dir = new THREE.DirectionalLight(0xf5f8ff, 1.2);
+    dir.position.set(-2.5, 2.5, 2.5);
+    scene.add(dir);
+
+    // Globe
+    const loader = new THREE.TextureLoader();
+    const mapTex = loader.load(TEX.map); mapTex.colorSpace = THREE.SRGBColorSpace;
+    const bumpTex = loader.load(TEX.bump);
+    const specTex = loader.load(TEX.spec);
+    const globeGeo = new THREE.SphereGeometry(1, 64, 64);
+    const globeMat = new THREE.MeshPhongMaterial({
+      map: mapTex,
+      bumpMap: bumpTex, bumpScale: 0.02,
+      specularMap: specTex, specular: new THREE.Color(0x888888), shininess: 14,
+      emissive: new THREE.Color(0x0a2748), emissiveIntensity: 0.45
+    });
+    const globe = new THREE.Mesh(globeGeo, globeMat);
+    scene.add(globe);
+
+    // Subtle starfield
+    const starsGeo = new THREE.BufferGeometry();
+    const starCount = 800;
+    const positions = new Float32Array(starCount*3);
+    for(let i=0;i<starCount;i++){
+      const r = 20 + Math.random()*20;
+      const theta = Math.random()*Math.PI*2;
+      const phi = Math.acos(2*Math.random()-1);
+      positions[i*3] = r * Math.sin(phi) * Math.cos(theta);
+      positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+      positions[i*3+2] = r * Math.cos(phi);
+    }
+    starsGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const stars = new THREE.Points(starsGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.02, transparent:true, opacity:.8 }));
+    scene.add(stars);
+
+    // Animation
+    function animate(){
+      globe.rotation.y += 0.0018;    // smooth rotation
+      stars.rotation.y -= 0.0006;
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Resize handler
+    window.addEventListener('resize', ()=>{
+      const w = wrap.clientWidth, h = wrap.clientHeight;
+      camera.aspect = w/h; camera.updateProjectionMatrix();
+      renderer.setSize(w,h);
+    });
+  </script>
+</body>
+</html>

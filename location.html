@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Location | Harvest House International (HHICC)</title>
+  <meta name="description" content="Harvest House International Church in Bulawayo, Zimbabwe – Taking the nations for Jesus through sermons, books, declarations, Bible School, Global Hubs, Generation Next, and Revival Zimbabwe, 90 days of prayer and fasting.">
+  <meta name="keywords" content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Harvest House International">
+  <meta property="og:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, Bible School, Global Hubs and more with Harvest House International Church.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description" content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+
+  <!-- Tailwind -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { hhi:{ bg:'#0b0d12', card:'#11131a', brand:'#8b5cf6', brand2:'#22d3ee' }},
+          boxShadow:{ card:'0 10px 30px rgba(0,0,0,.35)' },
+          keyframes:{
+            floatUp:{'0%':{opacity:0,transform:'translateY(18px) scale(.98)'},
+                     '60%':{opacity:1,transform:'translateY(-4px) scale(1.01)'},
+                     '100%':{opacity:1,transform:'translateY(0) scale(1)'}}
+          },
+          animation:{ floatUp:'floatUp .9s cubic-bezier(.2,.65,.2,1) both' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html{scroll-behavior:smooth}
+    .hero-grad{background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(11,13,18,.95))}
+    .page-backdrop{
+      background:
+        radial-gradient(1200px 600px at 70% 10%, rgba(139,92,246,.18), transparent 60%),
+        radial-gradient(900px 450px at 15% 70%, rgba(34,211,238,.12), transparent 60%);
+    }
+    .glow{transition:box-shadow .28s ease, transform .28s ease}
+    .glow:hover{transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,92,246,.45), 0 12px 32px rgba(0,0,0,.55), 0 0 42px rgba(139,92,246,.45)}
+    .reveal{opacity:0; transform:translateY(18px) scale(.98)}
+    .reveal.show{opacity:1; transform:none; animation:floatUp .9s cubic-bezier(.2,.65,.2,1) both}
+    .card{background-color:#11131a; border:1px solid rgba(255,255,255,.08); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .card:hover{transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,92,246,.35), 0 12px 28px rgba(0,0,0,.55)}
+    .map-shell{position:relative; overflow:hidden}
+    .map-shell iframe{position:relative; z-index:2; width:100%; height:520px; border:0; background:#04060a; opacity:0; transition:opacity .4s ease; pointer-events:none}
+    .map-shell img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; filter:saturate(1.15) contrast(1.05); opacity:1; transition:opacity .4s ease}
+    .map-shell.live iframe{opacity:1; pointer-events:auto}
+    .map-shell.live img{opacity:0}
+    .map-shell.offline iframe{opacity:0; pointer-events:none}
+    .map-shell.offline img{opacity:1}
+    .map-status{position:absolute; left:1rem; top:1rem; z-index:3; font-size:.75rem; letter-spacing:.03em; text-transform:uppercase; padding:.35rem .9rem; border-radius:999px; background:rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.15)}
+    .map-shell.offline .map-status{background:rgba(34,211,238,.18); border-color:rgba(34,211,238,.45); color:#aaf3ff}
+  </style>
+</head>
+
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton" class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90 glow">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="pt-24">
+    <section class="relative hero-grad">
+      <img src="assets/location.png" alt="Declarations" class="absolute inset-0 -z-10 w-full h-full object-cover opacity-90">
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-24 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] text-hhi-brand uppercase">Harvest House International</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold">Location</h1>
+        <div class="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2"></div>
+        <p class="mt-5 text-white/80">Visit us at Harvest House International Conference Centre (HHICC)</p>
+      </div>
+    </section>
+
+  <main class="page-backdrop">
+    <!-- Map + Info -->
+    <section class="py-8 sm:py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Google Map -->
+        <div class="reveal">
+          <!-- Tip: replace the q= with the exact Google Maps Place ID embed if you have it -->
+          <div id="hhiccMapWrap" class="map-shell rounded-3xl border border-white/10 shadow-card glow">
+            <img
+              src="assets/hhicc-map.png"
+              alt="Offline map preview showing Harvest House International Conference Centre"
+              loading="lazy">
+            <iframe
+              title="HHICC Map"
+              class="bg-transparent"
+              src="https://www.google.com/maps?q=Harvest%20House%20International%20Conference%20Centre%20Bulawayo&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div id="hhiccMapStatus" class="map-status">Offline map preview (HHICC)</div>
+          </div>
+        </div>
+
+        <!-- Address Card -->
+        <aside class="reveal">
+          <div class="rounded-3xl card p-6 sm:p-7 glow">
+            <h3 class="text-xl font-semibold">Main Location</h3>
+
+            <div class="mt-5">
+              <div class="text-white/60 text-xs uppercase tracking-wide">Address:</div>
+              <p class="mt-1 leading-relaxed">
+                Harvest House International Conference Centre (HHICC)<br/>
+                Stand No. 19742, Selbourne Park,<br/>
+                Bulawayo, Zimbabwe
+              </p>
+            </div>
+
+            <div class="mt-5">
+              <div class="text-white/60 text-xs uppercase tracking-wide">Hours:</div>
+              <p class="mt-1">Office: Mon–Fri, 08:30–17:00<br/>Services: See “Service Times” below</p>
+            </div>
+
+            <div class="mt-5">
+              <div class="text-white/60 text-xs uppercase tracking-wide">Phone:</div>
+              <p class="mt-1"><a class="hover:text-hhi-brand" href="tel:+263000000000">+263 77 198 2116</a></p>
+            </div>
+
+            <a
+              class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-brand px-5 py-2.5 font-semibold shadow-card hover:bg-hhi-brand/90 glow"
+              target="_blank"
+              href="https://www.google.com/maps/dir/?api=1&destination=Harvest+House+International+Conference+Centre+Bulawayo">
+              Get Directions →
+            </a>
+          </div>
+
+          <!-- Service Times -->
+          <div class="mt-6 rounded-3xl card p-6 sm:p-7 glow">
+            <h3 class="text-xl font-semibold">Service Times</h3>
+
+            <div class="mt-4">
+              <div class="font-semibold text-white/90">Tuesday Evenings</div>
+              <ul class="mt-2 text-white/80 space-y-1">
+                <li>5:30 PM – Prayer</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <div class="font-semibold text-white/90">Friday Evenings</div>
+              <ul class="mt-2 text-white/80 space-y-1">
+                <li>5:30 PM – Revival Nights</li>
+              </ul>
+            </div>
+
+            <div class="mt-5">
+              <div class="font-semibold text-white/90">Sunday Morning</div>
+              <ul class="mt-2 text-white/80 space-y-1">
+                <li>8:30 AM – Main Service</li>
+                <li>17:30 PM – The Encounter Service</li>
+              </ul>
+            </div>
+
+            <p class="mt-5 text-xs text-white/55">Update these to match HHICC’s current schedule.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Extra hubs (optional; hide/remove if not needed) -->
+    <section class="pb-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="rounded-3xl card p-6 sm:p-7 glow reveal">
+          <h3 class="text-lg font-semibold">Other Hubs</h3>
+          <p class="mt-2 text-white/70">If you’re not near Bulawayo, visit our <a class="underline decoration-hhi-brand/60 hover:text-hhi-brand" href="global.html">Global</a> page to find a hub near you.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#0a0c10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-8 text-sm">
+      <div class="space-y-3 reveal">
+        <div class="inline-flex items-center gap-2">
+          <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+          <span class="font-semibold">Harvest House International</span>
+        </div>
+        <p class="text-white/70">
+          Taking the nations for Jesus.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+            <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+            <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+          </a>
+          <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-white/75">
+          <li><a href="jesus.html" class="hover:text-white">Jesus / Salvation</a></li>
+          <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+          <li><a href="global.html" class="hover:text-white">Global</a></li>
+          <li><a href="index.html#giving" class="hover:text-white">Give</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Service Times</h4>
+        <ul class="space-y-2 text-white/75">
+          <li>Sunday Services</li>
+          <li>8:30 AM – Main Service</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p class="text-white/75">Need directions or help planning your visit?</p>
+        <a href="mailto:info@harvesthouseintl.org" class="mt-2 inline-block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5 glow">info@harvesthouseintl.org</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-xs text-white/60 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+        <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer basics
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('backToTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Reveal-once animations (respect reduced motion)
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      const io = new IntersectionObserver((entries,obs)=>entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); }
+      }), {threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
+    }
+
+    // Mobile navigation toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuButton && mobileMenu) {
+      const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+      const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+      const setMenuState = (isOpen) => {
+        mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+      };
+
+      mobileMenuButton.addEventListener('click', ()=>{
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=> setMenuState(false));
+      });
+
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth >= 768) setMenuState(false);
+      });
+
+      document.addEventListener('keydown', (event)=>{
+        if (event.key === 'Escape') setMenuState(false);
+      });
+    }
+
+    // Map offline fallback toggle
+    (function(){
+      const wrap = document.getElementById('hhiccMapWrap');
+      if(!wrap) return;
+      const iframe = wrap.querySelector('iframe');
+      const fallbackImg = wrap.querySelector('img');
+      const status = document.getElementById('hhiccMapStatus');
+      function setState(isOffline){
+        wrap.classList.toggle('offline', isOffline);
+        wrap.classList.toggle('live', !isOffline);
+        if(iframe) iframe.setAttribute('aria-hidden', isOffline ? 'true' : 'false');
+        if(fallbackImg) fallbackImg.setAttribute('aria-hidden', isOffline ? 'false' : 'true');
+        if(status) status.textContent = isOffline ? 'Offline map preview (HHICC)' : 'Live Google Maps embed';
+      }
+      setState(!navigator.onLine);
+      window.addEventListener('online', ()=>setState(false));
+      window.addEventListener('offline', ()=>setState(true));
+    })();
+  </script>
+</body>
+</html>

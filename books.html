@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Logos Library | Christian Books by Bishop Dr Colin Nyathi</title>
+  <meta name="description"
+    content="Logos Library at Harvest House International Church in Bulawayo, Zimbabwe. Explore Christian books by Bishop Dr Colin Nyathi and other faith-building resources from Harvest House International.">
+  <meta name="keywords"
+    content="Harvest House International, Harvest House International Church, Benny Hinn, Zimbabwe, Revival Zimbabwe, Revival Bulawayo, Revival in Zimbabwe, Revive us Zimbabwe, Colin Nyathi, Sarah Nyathi, HHI, HHICC, Harvest House International Conference Centre, Revival is Imminent, Revival, Church in Bulawayo, Church in Zimbabwe, Apostolic and Prophetic, Generation Next, 90 days of prayer and fasting, Books by Colin Nyathi, Dag Heward Mills Healing Campaign, Healing Crusade Zimbabwe, RJFC+48H, Explore sermons, books, declarations, Global Hubs, Bible School, Taking the nations for Jesus, School of Music Zimbabwe, Harvest House Music Academy, Harvest Music, Harvest on Campus, Bishop, Prophet, Apostle, Logos Library, Christian books Zimbabwe, church Bulawayo, sermons, declarations">
+  <meta property="og:title" content="Logos Library | Harvest House International">
+  <meta property="og:description"
+    content="Build your faith with books from Harvest House International – including titles by Bishop Dr Colin Nyathi. Explore the Logos Library and order your copy today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harvesthouseint.church/books">
+  <meta property="og:image" content="https://harvesthouseint.church/assets/books-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harvest House International">
+  <meta name="twitter:description"
+    content="Taking the nations for Jesus. Explore sermons, books, declarations, and more.">
+  <meta name="twitter:image" content="https://harvesthouseint.church/assets/og-image.jpg">
+
+  <!-- Tailwind -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Harvest House International Church",
+    "url": "https://harvesthouseint.church",
+    "logo": "https://harvesthouseint.church/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/HarvestHouseInternationHQ/",
+      "https://www.youtube.com/@harvesthouseint",
+      "https://www.instagram.com/harvesthouse_int/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulawayo",
+      "addressCountry": "Zimbabwe"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { hhi: { bg: '#0b0d12', card: '#11131a', brand: '#8b5cf6', brand2: '#22d3ee' } },
+          boxShadow: { card: '0 10px 30px rgba(0,0,0,.35)' },
+          keyframes: {
+            floatUp: {
+              '0%': { opacity: 0, transform: 'translateY(18px) scale(.98)' },
+              '60%': { opacity: 1, transform: 'translateY(-4px) scale(1.01)' },
+              '100%': { opacity: 1, transform: 'translateY(0) scale(1)' }
+            },
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } }
+          },
+          animation: { floatUp: 'floatUp .9s cubic-bezier(.2,.65,.2,1) both', fadeIn: 'fadeIn .6s ease-out both' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    .hero-grad {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .55), rgba(11, 13, 18, .95))
+    }
+
+    .page-backdrop {
+      background:
+        radial-gradient(1200px 600px at 70% 10%, rgba(139, 92, 246, .18), transparent 60%),
+        radial-gradient(900px 450px at 15% 70%, rgba(34, 211, 238, .12), transparent 60%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px) scale(.98)
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+      animation: floatUp .9s cubic-bezier(.2, .65, .2, 1) both
+    }
+
+    .card {
+      background-color: #11131a;
+      border: 1px solid rgba(255, 255, 255, .08);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 0 1px rgba(139, 92, 246, .38), 0 14px 32px rgba(0, 0, 0, .55)
+    }
+
+    .glow {
+      transition: box-shadow .28s ease, transform .28s ease
+    }
+
+    .glow:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 0 1px rgba(139, 92, 246, .45), 0 10px 28px rgba(0, 0, 0, .55), 0 0 42px rgba(139, 92, 246, .45)
+    }
+
+    .img-zoom {
+      transform: scale(1);
+      transition: transform .25s ease
+    }
+
+    .card:hover .img-zoom {
+      transform: scale(1.05)
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .tag:hover {
+      background: rgba(139, 92, 246, .15);
+      border-color: rgba(139, 92, 246, .35)
+    }
+
+    /* modal */
+    .modal {
+      display: none
+    }
+
+    .modal.show {
+      display: grid
+    }
+
+    input,
+    select,
+    textarea {
+      color: #111;
+    }
+  </style>
+</head>
+
+<body class="bg-hhi-bg text-white selection:bg-hhi-brand/30">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
+      <a href="index.html#top" class="flex items-center gap-2 font-semibold">
+        <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+        <span>Harvest House International</span>
+      </a>
+      <div class="ml-auto flex items-center gap-3">
+        <button id="mobileMenuButton"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+          aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg data-menu-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg data-menu-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+        </nav>
+        <a href="index.html#giving"
+          class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90 glow">Giving</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
+          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="books.html" class="text-hhi-brand">BOOKS</a>
+          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="index.html#giving"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="pt-24">
+    <section class="relative hero-grad">
+      <img src="assets/books.jpg" alt="Declarations"
+        class="absolute inset-0 -z-10 w-full h-full object-cover opacity-90">
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-24 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] text-hhi-brand uppercase">Harvest House International</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold">Logos Library</h1>
+        <div class="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-hhi-brand to-hhi-brand2"></div>
+        <p class="mt-5 text-white/80">Build your faith with sound doctrine and practical wisdom from Harvest House
+          authors. Get your copy today.</p>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <main class="page-backdrop">
+      <section class="py-10 sm:py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <!-- Filters (optional demo) -->
+          <div class="flex flex-wrap items-center gap-2 justify-between">
+            <div class="text-sm text-white/60">Showing <span id="countShown">0</span> books</div>
+            <div class="flex flex-wrap gap-2">
+              <button data-filter="all" class="tag px-3 py-1.5 rounded-full text-sm hover:text-white">All</button>
+              <button data-filter="teaching"
+                class="tag px-3 py-1.5 rounded-full text-sm hover:text-white">Teaching</button>
+              <button data-filter="leadership"
+                class="tag px-3 py-1.5 rounded-full text-sm hover:text-white">Leadership</button>
+              <button data-filter="devotional"
+                class="tag px-3 py-1.5 rounded-full text-sm hover:text-white">Devotional</button>
+            </div>
+          </div>
+
+          <!-- Grid -->
+          <div id="grid" class="mt-6 grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <!-- JS renders cards -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- BUY (PAYNOW) MODAL -->
+    <div id="buyModal" class="modal fixed inset-0 z-[60] place-items-center bg-black/70 p-6">
+      <div class="w-full max-w-3xl rounded-2xl bg-white text-gray-900 overflow-hidden grid md:grid-cols-2">
+        <div class="relative p-6 bg-gray-50">
+          <img id="buyCover" src="" alt="Book cover"
+            class="w-full h-64 object-cover rounded-xl shadow mb-4 animate-fadeIn" />
+          <h3 id="buyTitle" class="text-xl font-bold"></h3>
+          <p id="buyAuthor" class="text-sm text-gray-600"></p>
+          <div class="mt-4 inline-flex items-center gap-2 rounded-md border px-2.5 py-1 text-sm text-gray-700">Price:
+            <span id="buyPrice" class="font-semibold"></span>
+          </div>
+          <p class="mt-4 text-xs text-gray-600">You’ll pay securely via <strong>Paynow</strong> and collect your book at
+            the Harvest House location you choose.</p>
+        </div>
+
+        <form id="buyForm" class="p-6 space-y-4" onsubmit="event.preventDefault(); startPaynow();">
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm">First name<input required name="first"
+                class="mt-1 w-full rounded-md border px-3 py-2" placeholder="First name" /></label>
+            <label class="text-sm">Last name<input required name="last" class="mt-1 w-full rounded-md border px-3 py-2"
+                placeholder="Last name" /></label>
+          </div>
+          <label class="text-sm block">Email<input type="email" required name="email"
+              class="mt-1 w-full rounded-md border px-3 py-2" placeholder="Email" /></label>
+          <label class="text-sm block">Phone Number<input required name="phone"
+              class="mt-1 w-full rounded-md border px-3 py-2" placeholder="+263 ..." /></label>
+
+          <div class="grid grid-cols-2 gap-3">
+            <label class="text-sm block">Quantity
+              <input type="number" min="1" value="1" id="qty" name="qty"
+                class="mt-1 w-full rounded-md border px-3 py-2" />
+            </label>
+            <label class="text-sm block">Pickup Location
+              <select id="pickup" name="pickup" class="mt-1 w-full rounded-md border px-3 py-2">
+                <option>HHICC — Bulawayo</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-600">Total</span>
+            <span id="total" class="font-semibold">—</span>
+          </div>
+
+          <div class="grid gap-2">
+            <button class="rounded-md bg-emerald-600 text-white py-2.5 font-semibold hover:bg-emerald-700">Pay with
+              Paynow</button>
+            <button type="button" onclick="payViaWhatsApp()"
+              class="rounded-md bg-green-500 text-white py-2.5 font-semibold hover:bg-green-600 flex items-center justify-center gap-2">
+              <span>Pay via WhatsApp</span>
+            </button>
+            <button type="button" onclick="closeBuy()"
+              class="rounded-md bg-gray-100 py-2.5 font-semibold hover:bg-gray-200">Cancel</button>
+          </div>
+          <p class="text-xs text-gray-500">WhatsApp payments go directly to our Logos Library team on +263 78 639 3348.
+          </p>
+          <input type="hidden" id="buyId" />
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#0a0c10]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-8 text-sm">
+        <div class="space-y-3 reveal">
+          <div class="inline-flex items-center gap-2">
+            <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
+            <span class="font-semibold">Harvest House International</span>
+          </div>
+          <p class="text-white/70">
+            Taking the nations for Jesus.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.facebook.com/HarvestHouseInternationHQ/" target="_blank" aria-label="Facebook">
+              <img src="assets/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+            </a>
+            <a href="https://www.youtube.com/@harvesthouseint" target="_blank" aria-label="YouTube">
+              <img src="assets/youtube-icon.png" alt="YouTube" class="w-6 h-6">
+            </a>
+            <a href="https://www.instagram.com/harvesthouse_int/" target="_blank" aria-label="Instagram">
+              <img src="assets/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+            </a>
+          </div>
+        </div>
+        <div class="reveal">
+          <h4 class="font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-white/75">
+            <li><a href="jesus.html" class="hover:text-white">Jesus / Salvation</a></li>
+            <li><a href="get-involved.html" class="hover:text-white">Get Involved</a></li>
+            <li><a href="global.html" class="hover:text-white">Global</a></li>
+            <li><a href="index.html#giving" class="hover:text-white">Give</a></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h4 class="font-semibold mb-3">Store Help</h4>
+          <ul class="space-y-2 text-white/75">
+            <li>Email: <a class="underline decoration-hhi-brand/60 hover:text-hhi-brand"
+                href="mailto:store@harvesthouseintl.org">store@harvesthouseintl.org</a></li>
+            <li>Collect at your chosen Hub after payment confirmation.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h4 class="font-semibold mb-3">Policies</h4>
+          <p class="text-white/75">Physical orders ready for collection typically within 3–7 days. Please bring your
+            payment reference and ID.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 text-xs text-white/60 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+          <div>© <span id="year"></span> Harvest House International. All rights reserved.</div>
+          <button id="backToTop" class="text-white/60 hover:text-white/80">Back to top ↗</button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- DATA + SCRIPTS -->
+    <script>
+      // Footer basics
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Reveal-once animations
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const attachReveals = () => {
+        if (!reduce) {
+          const io = new IntersectionObserver((entries, obs) => entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+          }), { threshold: .15 });
+          document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        } else {
+          document.querySelectorAll('.reveal').forEach(el => el.classList.add('show'));
+        }
+      };
+
+      // --- BOOKS DATA (swap with your real catalogue) ---
+      const BOOKS = [
+        {
+          id: 'bk1',
+          title: 'Desperate for God\'s Presence',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/desperate for.jpg',
+          priceUSD: 12,
+          tags: ['desperation, seeking God'],
+          epub: 'documents/Desperate for God\'s Presence.epub'
+        },
+        {
+          id: 'bk2',
+          title: 'End time Anointings and Mantles',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Endtime Anointings and mantles.jpg',
+          priceUSD: 15,
+          tags: ['anointing', 'mantles'],
+          epub: 'documents/End Time Anointings And Mantles - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk3',
+          title: 'The Essence of Leadership',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Vision.jpg',
+          priceUSD: 10,
+          tags: ['leadership'],
+          epub: 'documents/Vision The Essence of Leadership - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk4',
+          title: 'The End time Events',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/The end time events.jpg',
+          priceUSD: 10,
+          tags: ['end times'],
+          epub: 'documents/End Time Events - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk5',
+          title: 'Great Grace',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Great Grace.jpg',
+          priceUSD: 18,
+          tags: ['grace'],
+          epub: 'documents/Great Grace - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk6',
+          title: 'Understanding the Power of Jesus Christ',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/The blood the cross and the name of Jesus Christ.jpg',
+          priceUSD: 18,
+          tags: ['power, Jesus'],
+          epub: 'documents/Power of the Blood, the Cross and the Name of Jesus, The - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk7',
+          title: 'Holy of Holies',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Holy of Holies.jpg',
+          priceUSD: 18,
+          tags: ['holiness'],
+          epub: 'documents/Holy of Holies - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk8',
+          title: 'Leadership',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Leadership.jpg',
+          priceUSD: 18,
+          tags: ['leadership, ambition'],
+          epub: 'documents/Leadership An Honorable Ambition - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk9',
+          title: 'Understanding Duplicity',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Understanding Duplicity.jpg',
+          priceUSD: 18,
+          tags: ['duplicity, deceit'],
+          epub: 'documents/Understanding Duplicity, Honesty and Integrity - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk10',
+          title: 'Understanding Stewardship & Frugality',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Stewardship & Frugality.jpg',
+          priceUSD: 18,
+          tags: ['stewardship, frugality'],
+          epub: 'documents/Understanding stewardship and frugality - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk11',
+          title: 'Prayer and Fasting',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Prayer and fasting.jpg',
+          priceUSD: 18,
+          tags: ['prayer, fasting'],
+          epub: 'documents/Prayer, Fasting and Spiritual Warfare - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk12',
+          title: 'The year of Jubilee',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/The year of Jubilee.jpg',
+          priceUSD: 18,
+          tags: ['The year of Jubilee'],
+          epub: 'documents/Year of Jubilee, The - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk14',
+          title: 'Eternal Judgement',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Eternal Judgement.jpg',
+          priceUSD: 18,
+          tags: ['judgment, endtimes, eternity'],
+          epub: 'documents/Eternal Judgementt - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk15',
+          title: 'Faith in God',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/Faith in God.jpg',
+          priceUSD: 18,
+          tags: ['faith, power'],
+          epub: 'documents/FAITH IN GOD - Bishop Dr Colin Nyathi.epub'
+        },
+        {
+          id: 'bk16',
+          title: 'Old Testament Apostolic Ministry',
+          author: 'Bishop Dr. Colin Nyathi',
+          cover: 'assets/books/The Old Testament.jpg',
+          priceUSD: 18,
+          tags: ['ministry, apostolic, old testament'],
+          epub: 'documents/Apostolic Ministry in The Old and New Testament - Bishop Dr Colin Nyathi.epub'
+        }
+      ];
+
+      // Render grid
+      const grid = document.getElementById('grid');
+      function bookCard(b) {
+        return `
+      <article id="${b.id}" class="card rounded-2xl overflow-hidden reveal">
+        <div class="relative aspect-[3/4] overflow-hidden">
+          <img src="${b.cover}" alt="${b.title} cover" class="w-full h-full object-cover img-zoom"/>
+          <div class="absolute top-2 left-2 flex gap-2">
+            ${b.tags.map(t => `<span class="px-2 py-0.5 rounded-full text-xs bg-black/60 border border-white/20">${t}</span>`).join('')}
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">${b.title}</h3>
+          <p class="text-sm text-white/60">${b.author}</p>
+          <div class="mt-4 flex flex-col gap-2">
+             <a href="${b.epub}" download class="w-full rounded-full bg-hhi-brand px-3 py-2 text-sm font-semibold text-center hover:bg-hhi-brand/90 glow">Download</a>
+             <div class="flex items-center justify-between gap-2">
+               <span class="text-sm text-white/80">USD <span class="font-semibold">${b.priceUSD.toFixed(2)}</span></span>
+               <div class="flex items-center gap-2">
+                  <button onclick="openBuy('${b.id}')" class="rounded-full border border-white/20 px-3 py-1.5 text-xs text-white/80 hover:bg-white/10">Buy Physical</button>
+                  <button type="button" onclick="shareBook('${b.id}')" class="rounded-full border border-white/20 px-3 py-1.5 text-xs text-white/80 hover:bg-white/10">Share</button>
+               </div>
+             </div>
+          </div>
+        </div>
+      </article>`;
+      }
+      function renderBooks(list) {
+        grid.innerHTML = list.map(bookCard).join('');
+        document.getElementById('countShown').textContent = list.length;
+        attachReveals();
+      }
+      renderBooks(BOOKS);
+
+      // Filter buttons
+      let activeFilter = 'all';
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          const list = activeFilter === 'all' ? BOOKS : BOOKS.filter(b => b.tags.includes(activeFilter));
+          renderBooks(list);
+          // visual toggle
+          document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('bg-hhi-brand', 'text-white'));
+          btn.classList.add('bg-hhi-brand', 'text-white');
+        });
+      });
+
+      // --- PAYNOW FLOW (front-end stub) ---
+      const modal = document.getElementById('buyModal');
+      const qty = document.getElementById('qty');
+      const totalEl = document.getElementById('total');
+      const coverEl = document.getElementById('buyCover');
+      const titleEl = document.getElementById('buyTitle');
+      const authorEl = document.getElementById('buyAuthor');
+      const priceEl = document.getElementById('buyPrice');
+      const idEl = document.getElementById('buyId');
+
+      let currentBook = null;
+
+      function openBuy(id) {
+        currentBook = BOOKS.find(b => b.id === id);
+        if (!currentBook) return;
+        idEl.value = currentBook.id;
+        coverEl.src = currentBook.cover;
+        titleEl.textContent = currentBook.title;
+        authorEl.textContent = currentBook.author;
+        priceEl.textContent = `USD ${currentBook.priceUSD.toFixed(2)}`;
+        qty.value = 1;
+        calcTotal();
+        modal.classList.add('show');
+      }
+      function closeBuy() { modal.classList.remove('show'); }
+      window.closeBuy = closeBuy; window.openBuy = openBuy;
+
+      function calcTotal() {
+        if (!currentBook) return;
+        const q = Math.max(1, parseInt(qty.value || '1', 10));
+        const total = q * currentBook.priceUSD;
+        totalEl.textContent = `USD ${total.toFixed(2)}`;
+      }
+      qty.addEventListener('input', calcTotal);
+
+      function shareBook(id) {
+        const book = BOOKS.find(b => b.id === id);
+        if (!book) return;
+
+        const url = `${window.location.origin}${window.location.pathname}#${encodeURIComponent(book.id)}`;
+        const text = `${book.title} by ${book.author}`;
+
+        if (navigator.share) {
+          navigator.share({
+            title: book.title,
+            text,
+            url
+          }).catch(() => { /* user cancelled or error; no action needed */ });
+        } else if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(`${text} — ${url}`)
+            .then(() => alert('Book link copied to clipboard'))
+            .catch(() => alert(`Book link: ${url}`));
+        } else {
+          prompt('Copy this book link:', `${text} — ${url}`);
+        }
+      }
+      window.shareBook = shareBook;
+
+      // IMPORTANT:
+      // This is a front-end placeholder. When you get your real Paynow Integration ID:
+      // 1) Create the payment on your server (amount, item, reference, return/cancel URLs)
+      // 2) Redirect the user to the Paynow "redirectUrl" you receive.
+      function startPaynow() {
+        const f = document.getElementById('buyForm');
+        const data = {
+          id: idEl.value,
+          title: currentBook.title,
+          amount: (Math.max(1, parseInt(qty.value || '1', 10)) * currentBook.priceUSD).toFixed(2),
+          first: f.first.value.trim(),
+          last: f.last.value.trim(),
+          email: f.email.value.trim(),
+          phone: f.phone.value.trim(),
+          pickup: f.pickup.value,
+          paymentMethod: 'Paynow'
+        };
+
+        // Send order details to Google Sheets / Drive (via Apps Script web app)
+        try {
+          fetch('https://script.google.com/macros/s/AKfycbxANUgZB3INE-2gMZNaT9Gh3ut12CBnoh9sZ_E_LO1XAkEqPgyqZ0h5RDes-QiS8Gsz/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        } catch (e) {
+          console.error('Failed to log order', e);
+        }
+
+        // For now we just simulate a redirect with a composed URL.
+        const ref = encodeURIComponent(`${data.id}-${Date.now()}`);
+        const paynowDemo = `https://paynow.example/checkout?amount=${data.amount}&reference=${ref}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.phone)}&item=${encodeURIComponent(data.title)}`;
+
+        // Persist a simple “order” so your pickup desk can verify
+        localStorage.setItem('hhi_last_order', JSON.stringify(data));
+
+        // Redirect
+        window.location.href = paynowDemo;
+      }
+      window.startPaynow = startPaynow;
+
+      function payViaWhatsApp() {
+        if (!currentBook) return;
+        const f = document.getElementById('buyForm');
+        const q = Math.max(1, parseInt(qty.value || '1', 10));
+        const amount = (q * currentBook.priceUSD).toFixed(2);
+        const name = `${f.first.value.trim()} ${f.last.value.trim()}`.trim();
+        const pickup = f.pickup.value;
+        const phone = f.phone.value.trim();
+        const email = f.email.value.trim();
+
+        const lines = [
+          'Logos Library book order',
+          '',
+          `Book: ${currentBook.title}`,
+          `Author: ${currentBook.author}`,
+          `Qty: ${q}`,
+          `Amount: USD ${amount}`,
+          `Pickup: ${pickup}`,
+          name && `Name: ${name}`,
+          phone && `Customer phone: ${phone}`,
+          email && `Customer email: ${email}`
+        ].filter(Boolean);
+
+        const message = encodeURIComponent(lines.join('\n'));
+
+        // Log WhatsApp order to Apps Script endpoint
+        const data = {
+          id: currentBook.id,
+          title: currentBook.title,
+          amount,
+          first: f.first.value.trim(),
+          last: f.last.value.trim(),
+          email,
+          phone,
+          pickup,
+          paymentMethod: 'WhatsApp'
+        };
+
+        try {
+          fetch('https://script.google.com/macros/s/AKfycbxANUgZB3INE-2gMZNaT9Gh3ut12CBnoh9sZ_E_LO1XAkEqPgyqZ0h5RDes-QiS8Gsz/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        } catch (e) {
+          console.error('Failed to log WhatsApp order', e);
+        }
+
+        const waNumber = '263786393348'; // +263 78 639 3348
+        const url = `https://wa.me/${waNumber}?text=${message}`;
+        window.open(url, '_blank');
+      }
+      window.payViaWhatsApp = payViaWhatsApp;
+
+      // Mobile navigation toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenuButton && mobileMenu) {
+        const openIcon = mobileMenuButton.querySelector('[data-menu-icon="open"]');
+        const closeIcon = mobileMenuButton.querySelector('[data-menu-icon="close"]');
+        const setMenuState = (isOpen) => {
+          mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileMenu.classList.toggle('hidden', !isOpen);
+          openIcon?.classList.toggle('hidden', isOpen);
+          closeIcon?.classList.toggle('hidden', !isOpen);
+        };
+
+        mobileMenuButton.addEventListener('click', () => {
+          const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+          setMenuState(!isOpen);
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => setMenuState(false));
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) setMenuState(false);
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') setMenuState(false);
+        });
+      }
+
+      // Kick animations on load
+      attachReveals();
+    </script>
+</body>
+
+</html>
