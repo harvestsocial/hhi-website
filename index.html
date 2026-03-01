@@ -174,15 +174,15 @@
     }
 
     /* === Glow & Zoom effects === */
-    header a[href="#giving"],
+    header a[href="/giving"],
     #top a[href="#events"],
-    #top a[href="#channel"],
+    #top a[href="/channel"],
     #giving button {
       transition: box-shadow .25s ease, transform .2s ease;
     }
-    header a[href="#giving"]:hover,
+    header a[href="/giving"]:hover,
     #top a[href="#events"]:hover,
-    #top a[href="#channel"]:hover,
+    #top a[href="/channel"]:hover,
     #giving button:hover {
       transform: translateY(-1px);
       box-shadow: 0 0 0 1px rgba(139,92,246,.45),
@@ -274,7 +274,7 @@
 <body class="bg-hhi-bg text-white antialiased selection:bg-hhi-brand/30">
   <header class="fixed top-0 inset-x-0 z-50 bg-black/40 backdrop-blur border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16">
-      <a href="index.html#top" class="flex items-center gap-2 font-semibold tracking-tight">
+      <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
         <img src="assets/logo.png" alt="Harvest House International logo" class="h-9 w-auto">
         <span>Harvest House International</span>
       </a>
@@ -292,32 +292,32 @@
           </svg>
         </button>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
-          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
-          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
-          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
-          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
-          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
-          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
-          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
-          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="/salvation" class="hover:text-hhi-brand">JESUS</a>
+          <a href="/about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="/books" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="/global" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="/bible-school" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="/declarations" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="/gallery" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="/get-involved" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="/location" class="hover:text-hhi-brand">LOCATION</a>
         </nav>
-        <a href="index.html#giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+        <a href="/giving" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-4 py-2 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
       </div>
     </div>
     <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/90 backdrop-blur md:hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav class="flex flex-col gap-3 text-sm">
-          <a href="salvation.html" class="hover:text-hhi-brand">JESUS</a>
-          <a href="index.html#about" class="hover:text-hhi-brand">WHO WE ARE</a>
-          <a href="books.html" class="hover:text-hhi-brand">BOOKS</a>
-          <a href="global.html" class="hover:text-hhi-brand">GLOBAL</a>
-          <a href="bible school.html" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
-          <a href="declarations.html" class="hover:text-hhi-brand">DECLARATIONS</a>
-          <a href="gallery.html" class="hover:text-hhi-brand">GALLERY</a>
-          <a href="get involved.html" class="hover:text-hhi-brand">GET INVOLVED</a>
-          <a href="location.html" class="hover:text-hhi-brand">LOCATION</a>
-          <a href="index.html#giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
+          <a href="/salvation" class="hover:text-hhi-brand">JESUS</a>
+          <a href="/about" class="hover:text-hhi-brand">WHO WE ARE</a>
+          <a href="/books" class="hover:text-hhi-brand">BOOKS</a>
+          <a href="/global" class="hover:text-hhi-brand">GLOBAL</a>
+          <a href="/bible-school" class="hover:text-hhi-brand">BIBLE SCHOOL</a>
+          <a href="/declarations" class="hover:text-hhi-brand">DECLARATIONS</a>
+          <a href="/gallery" class="hover:text-hhi-brand">GALLERY</a>
+          <a href="/get-involved" class="hover:text-hhi-brand">GET INVOLVED</a>
+          <a href="/location" class="hover:text-hhi-brand">LOCATION</a>
+          <a href="/giving" class="inline-flex items-center justify-center gap-2 rounded-full bg-hhi-brand px-4 py-2 font-semibold shadow-card hover:bg-hhi-brand/90">Giving</a>
         </nav>
       </div>
     </div>
@@ -338,7 +338,7 @@
       <p class="mt-6 text-xl text-white/80 reveal">Welcome, we're glad you're here.</p>
       <div class="mt-8 flex items-center justify-center gap-4 reveal">
         <button type="button" onclick="openWeekend()" class="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold frosted-cta">Join Us This Weekend</button>
-        <a href="#channel" class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Online</a>
+        <a href="/channel" class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Online</a>
       </div>
       <img src="assets/HHI 30.png" alt="HHI 30 Years Logo" id="anniversaryLogo" class="mx-auto w-44 mt-8 animate-fadeIn animate-glowPulse reveal"/>
       <div id="scrollDownBtn" class="mt-16 text-white/60 text-sm hover:text-white/80 inline-flex flex-col items-center gap-3 reveal">
@@ -365,7 +365,7 @@
           <img src="assets/Bihops C & S.jpg" class="w-full h-44 object-cover rounded-xl" alt="Pastor portrait"/>
           <h3 class="mt-4 text-lg font-semibold">Bishops Dr. Colin & Sarah Nyathi</h3>
           <p class="text-sm text-white/70">Founders & Senior Pastors of Harvest House International</p>
-          <a href="our leaders.html" class="mt-4 inline-flex text-hhi-brand underline underline-offset-4">Get to know them →</a>
+          <a href="/our-leaders" class="mt-4 inline-flex text-hhi-brand underline underline-offset-4">Get to know them →</a>
         </div>
       </aside>
     </div>
@@ -381,8 +381,8 @@
         <p class="mt-4 text-white/80 leading-relaxed">Discover the vision, stories and resources that continue to shape our movement.</p>
         <img src="assets/signature.png" alt="Signature of Bishop Dr. Colin Nyathi" class="mt-6 h-14 w-auto opacity-80">
         <div class="mt-4 flex flex-wrap gap-3">
-          <a href="books.html" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/10">Books</a>
-          <a href="sermons.html" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-5 py-2.5 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Sermons</a>
+          <a href="/books" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/10">Books</a>
+          <a href="/sermons" class="inline-flex items-center gap-2 rounded-full bg-hhi-brand px-5 py-2.5 text-sm font-semibold shadow-card hover:bg-hhi-brand/90">Sermons</a>
         </div>
       </div>
       <div class="relative reveal flex items-end justify-center h-full lg:self-end">
@@ -399,13 +399,13 @@
         <div class="mt-2 h-1 w-24 bg-orange-400"></div>
         <p class="mt-6 text-white/80">Your all-access pass to what’s happening across Harvest House International.
           Catch services, testimonies and specials from around the world.</p>
-        <a href="sermons.html" class="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Live Streams →</a>
+        <a href="/sermons" class="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-semibold hover:bg-white/10">Watch Live Streams →</a>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card reveal group">
         <img src="assets/hhi-thumb.jpg" alt="HHI Channel"
              class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-50">
         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30"></div>
-        <a href="sermons.html"
+        <a href="/sermons"
            class="absolute inset-0 flex items-center justify-center"
            aria-label="Play sermons">
           <div class="w-20 h-20 rounded-full bg-white/90 text-black text-4xl flex items-center justify-center shadow-xl group-hover:scale-110 transition">
@@ -460,7 +460,7 @@
         <h2 class="text-4xl font-bold">Harvest on Campus</h2>
         <div class="mt-2 h-1 w-24 bg-orange-400"></div>
         <p class="mt-6 text-white/80">We are committed to bringing the Gospel to every city and Campus and winning young souls to Christ.</p>
-        <a href="totalmen.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+        <a href="/totalmen" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
         <img src="assets/HoC.jpg" class="w-full h-full object-cover" alt="Crusade"/>
@@ -475,7 +475,7 @@
         <h2 class="text-4xl font-bold">Generation Next</h2>
         <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
         <p class="mt-6 text-white/80">Empowering &amp; equipping the next generation of leaders. Join us for impactful gatherings, powerful teachings, and divine connections.</p>
-        <a href="gennext.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+        <a href="/gennext" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
         <img src="assets/gen-next.jpg" class="w-full h-full object-cover" alt="Crusade"/>
@@ -490,7 +490,7 @@
         <h2 class="text-4xl font-bold">Total Men</h2>
         <div class="mt-2 h-1 w-24 bg-orange-400"></div>
         <p class="mt-6 text-white/80">We are committed to bringing the Gospel to every city and Campus and winning young souls to Christ.</p>
-        <a href="totalmen.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+        <a href="/totalmen" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
         <img src="assets/totalmen.jpg" class="w-full h-full object-cover" alt="Crusade"/>
@@ -505,7 +505,7 @@
         <h2 class="text-4xl font-bold">Maximised Lifestyle</h2>
         <div class="mt-2 h-1 w-24 bg-hhi-brand"></div>
         <p class="mt-6 text-white/80">Empowering &amp; equipping the next generation of leaders. Join us for impactful gatherings, powerful teachings, and divine connections.</p>
-        <a href="maximised-lifestyle.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
+        <a href="/maximised-lifestyle" class="mt-6 inline-flex items-center gap-2 rounded-full bg-hhi-card px-6 py-3 font-semibold shadow-card hover:bg-white/5">Learn more →</a>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-card bg-black/40 reveal">
         <img src="assets/mli.jpg" class="w-full h-full object-cover" alt="Crusade"/>
@@ -547,11 +547,11 @@
       <div class="reveal">
         <h4 class="font-semibold mb-3">Quick Links</h4>
         <ul class="space-y-2 text-white/75">
-          <li><a href="#about" class="hover:text-white">About Us</a></li>
-          <li><a href="#founder" class="hover:text-white">Our Founder</a></li>
-          <li><a href="#channel" class="hover:text-white">HHI Channel</a></li>
-          <li><a href="#music" class="hover:text-white">Harvest Music</a></li>
-          <li><a href="#giving" class="hover:text-white">Give</a></li>
+          <li><a href="/about" class="hover:text-white">About Us</a></li>
+          <li><a href="/founder" class="hover:text-white">Our Founder</a></li>
+          <li><a href="/channel" class="hover:text-white">HHI Channel</a></li>
+          <li><a href="/music" class="hover:text-white">Harvest Music</a></li>
+          <li><a href="/giving" class="hover:text-white">Give</a></li>
         </ul>
       </div>
       <div class="reveal">
@@ -569,7 +569,7 @@
         <h4 class="font-semibold mb-3">Connect With Us</h4>
         <p class="text-white/75">Catch the latest sermon from the Harvest House International.</p>
         <div class="mt-3 space-y-2">
-          <a href="sermons.html" class="block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">Sermons →</a>
+          <a href="/sermons" class="block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">Sermons →</a>
           <a href="#" class="block rounded-lg bg-hhi-card px-4 py-3 shadow-card hover:bg-white/5">Android App →</a>
         </div>
       </div>
@@ -628,7 +628,7 @@
             <p class="text-white/70 text-sm">Selbourne Park, Bulawayo</p>
             <p class="text-white/60 text-sm">Behind Fazak Home &amp; Hyper</p>
           </div>
-          <a href="location.html" class="mt-10 inline-flex items-center justify-center rounded-full bg-white/10 px-4 py-3 font-semibold border border-white/20 hover:bg-white/20 transition">
+          <a href="/location" class="mt-10 inline-flex items-center justify-center rounded-full bg-white/10 px-4 py-3 font-semibold border border-white/20 hover:bg-white/20 transition">
             Get Directions
           </a>
         </div>
@@ -713,6 +713,29 @@
     // Hero video plays continuously
     const heroVideo = document.getElementById('heroVideo');
     heroVideo?.play().catch(()=>{});
+
+    // Support clean section routes without hash fragments.
+    const sectionRoutes = {
+      '/about': 'about',
+      '/founder': 'founder',
+      '/channel': 'channel',
+      '/music': 'music',
+      '/giving': 'giving'
+    };
+    const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    const querySection = new URLSearchParams(window.location.search).get('section');
+    const targetSectionId = sectionRoutes[normalizedPath] || querySection;
+    if (targetSectionId) {
+      const targetSection = document.getElementById(targetSectionId);
+      const siteHeader = document.querySelector('header');
+      if (targetSection) {
+        const headerOffset = siteHeader ? siteHeader.offsetHeight : 0;
+        requestAnimationFrame(() => {
+          const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: 'auto' });
+        });
+      }
+    }
 
     // Subtle tilt on Hlala Nami artwork (reacts to movement across the whole section)
     const tiltTargets = Array.from(document.querySelectorAll('[data-tilt]'));

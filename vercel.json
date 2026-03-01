@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/bible-school", "destination": "/bible school.html" },
+    { "source": "/get-involved", "destination": "/get involved.html" },
+    { "source": "/our-leaders", "destination": "/our leaders.html" },
+    { "source": "/about", "destination": "/index.html?section=about" },
+    { "source": "/founder", "destination": "/index.html?section=founder" },
+    { "source": "/channel", "destination": "/index.html?section=channel" },
+    { "source": "/music", "destination": "/index.html?section=music" },
+    { "source": "/giving", "destination": "/index.html?section=giving" }
+  ]
+}
