@@ -1,6 +1,8 @@
 (function () {
   const API_KEY = window.HHI_YT_API_KEY || '';
-  const CHANNEL_ID = 'UCslATpJxjEqoQY37itH8h0w';
+  const DEFAULT_CHANNEL_ID = 'UCslATpJxjEqoQY37itH8h0w';
+  const CHANNEL_HANDLE = window.HHI_YT_CHANNEL_HANDLE || '@harvesthouseint';
+  const AUTO_REFRESH_MS = Number(window.HHI_SERMONS_REFRESH_MS || 180000);
   const grid = document.getElementById('sermon-grid');
   const empty = document.getElementById('sermon-empty');
   const errorEl = document.getElementById('sermon-error');
@@ -29,9 +31,11 @@
     return;
   }
 
+  let channelId = DEFAULT_CHANNEL_ID;
   let nextPageToken = '';
   let loading = false;
   let finished = false;
+  let refreshTimer = null;
   const state = { items: [], query: '', sort: 'newest', duration: 'all', liveOnly: false };
 
   const normalize = (text) => (text || '').toLowerCase();
@@ -158,6 +162,25 @@
     loadMore(true);
   };
 
+  const resolveChannelId = async () => {
+    if (!API_KEY || !CHANNEL_HANDLE) return channelId;
+    try {
+      const params = new URLSearchParams({
+        key: API_KEY,
+        part: 'id',
+        forHandle: CHANNEL_HANDLE.replace(/^@/, '')
+      });
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?${params.toString()}`);
+      if (!res.ok) return channelId;
+      const data = await res.json();
+      const resolved = data.items?.[0]?.id;
+      if (resolved) channelId = resolved;
+    } catch (err) {
+      console.warn('Unable to resolve channel by handle, using default channel id.', err);
+    }
+    return channelId;
+  };
+
   const loadMore = async (isFresh = false) => {
     if (loading || finished) return;
     loading = true;
@@ -166,13 +189,12 @@
       const params = new URLSearchParams({
         key: API_KEY,
         part: 'snippet',
-        channelId: CHANNEL_ID,
+        channelId: channelId,
         order: 'date',
         type: 'video',
         maxResults: '12'
       });
       if (state.liveOnly) params.set('eventType', 'live');
-      else params.set('eventType', 'completed');
       if (nextPageToken) params.set('pageToken', nextPageToken);
       const url = `https://www.googleapis.com/youtube/v3/search?${params.toString()}`;
       const res = await fetch(url);
@@ -291,5 +313,18 @@
   if (durationSelect) durationSelect.value = dur;
   updateLiveToggleLabel();
 
-  loadMore(true);
+  const startAutoRefresh = () => {
+    if (!Number.isFinite(AUTO_REFRESH_MS) || AUTO_REFRESH_MS < 60000) return;
+    if (refreshTimer) clearInterval(refreshTimer);
+    refreshTimer = setInterval(() => {
+      if (document.visibilityState === 'visible') {
+        resetAndReload();
+      }
+    }, AUTO_REFRESH_MS);
+  };
+
+  resolveChannelId().finally(() => {
+    loadMore(true);
+    startAutoRefresh();
+  });
 })();
